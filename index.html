@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Jelilat Oluwatosin Abdullateef — Data Analyst, Product Manager, Sales Professional &amp; Business Generalist." />
+  <meta name="author" content="Jelilat Oluwatosin Abdullateef" />
+  <meta property="og:title" content="Jelilat Oluwatosin Abdullateef | JelilatDataInsights" />
+  <meta property="og:description" content="Turning Data Into Decisions &amp; Ideas Into Impact" />
+  <meta property="og:type" content="website" />
+  <title>Jelilat Oluwatosin Abdullateef | Data Analyst &amp; Business Generalist</title>
+
+  <!-- Google Fonts: Syne (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ═══ AURORA CANVAS (fixed background) ═══ -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- ═══ ORB SPAWN LAYER (click effects) ═══ -->
+  <div id="orb-container" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+
+      <!-- Brand -->
+      <a href="#home" class="nav-brand" aria-label="Go to top">
+        <span id="nav-initials">JOA</span><span class="brand-dot">.</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home"         class="nav-link" data-section="home">Home</a></li>
+        <li><a href="#about"        class="nav-link" data-section="about">About</a></li>
+        <li><a href="#projects"     class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#experience"   class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#skills"       class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#services"     class="nav-link" data-section="services">Services</a></li>
+        <li><a href="#testimonials" class="nav-link" data-section="testimonials">Testimonials</a></li>
+        <li><a href="#contact"      class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <!-- Nav actions -->
+      <div class="nav-actions">
+        <a id="nav-resume-btn" href="#" class="btn btn-ghost btn-sm" download>Resume</a>
+        <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
+        <button id="theme-toggle" class="icon-btn theme-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <span class="theme-icon-moon">🌙</span>
+          <span class="theme-icon-sun">☀️</span>
+        </button>
+        <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul>
+        <li><a href="#home"         class="mobile-nav-link">Home</a></li>
+        <li><a href="#about"        class="mobile-nav-link">About</a></li>
+        <li><a href="#projects"     class="mobile-nav-link">Projects</a></li>
+        <li><a href="#experience"   class="mobile-nav-link">Experience</a></li>
+        <li><a href="#skills"       class="mobile-nav-link">Skills</a></li>
+        <li><a href="#services"     class="mobile-nav-link">Services</a></li>
+        <li><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
+        <li><a href="#contact"      class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-menu-btns">
+        <a id="mobile-resume-btn" href="#" class="btn btn-ghost" download>⬇ Resume</a>
+        <a href="#contact" class="btn btn-primary mobile-hire">Hire Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════════════════ -->
+  <section id="home" class="section hero-section">
+    <div class="container hero-grid">
+
+      <!-- Left: Content -->
+      <div class="hero-content reveal-left">
+        <p class="hero-eyebrow">👋 Hello, I'm</p>
+        <h1 class="hero-name" id="hero-name"></h1>
+        <div class="hero-role-row">
+          <span class="role-prefix">I'm a&nbsp;</span>
+          <span class="role-wrap">
+            <span id="typewriter-text" class="role-typed" aria-live="polite"></span>
+            <span class="type-cursor" aria-hidden="true">|</span>
+          </span>
+        </div>
+        <p class="hero-tagline" id="hero-tagline"></p>
+
+        <!-- CTA buttons -->
+        <div class="hero-btns">
+          <a href="#projects"   class="btn btn-primary">View Work</a>
+          <a href="#contact"    class="btn btn-secondary">Hire Me</a>
+          <a id="hero-schedule" href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">📅 Schedule a 1-1</a>
+          <a id="hero-resume"   href="#" class="btn btn-ghost" download>⬇ Resume</a>
+        </div>
+
+        <!-- Social icons -->
+        <div class="hero-social" id="hero-social" aria-label="Social links"></div>
+      </div>
+
+      <!-- Right: Visual / Photo -->
+      <div class="hero-visual reveal-right">
+        <div class="profile-rig">
+          <div class="rig-ring rig-ring-outer"></div>
+          <div class="rig-ring rig-ring-inner"></div>
+          <div class="rig-photo">
+            <img id="hero-photo" src="https://placehold.co/440x440/8B5CF6/FFFFFF?text=JOA" alt="Jelilat Oluwatosin Abdullateef profile photo" width="440" height="440" />
+          </div>
+          <!-- Floating skill badges -->
+          <div class="skill-badge badge-tl">📊 Data</div>
+          <div class="skill-badge badge-tr">🎯 Sales</div>
+          <div class="skill-badge badge-bl">🔬 Product</div>
+          <div class="skill-badge badge-br">💼 Business</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll cue -->
+    <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+      <div class="scroll-dot"></div>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════════════════════ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Who I Am</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="title-bar"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy reveal-left">
+          <p id="about-p1" class="about-para"></p>
+          <p id="about-p2" class="about-para"></p>
+          <div class="about-chips">
+            <span class="chip">📊 Data Analytics</span>
+            <span class="chip">📋 Product Management</span>
+            <span class="chip">🔍 QA Testing</span>
+            <span class="chip">🎯 Sales</span>
+            <span class="chip">🚀 Lead Generation</span>
+            <span class="chip">💼 Business Analysis</span>
+          </div>
+          <a id="about-resume" href="#" class="btn btn-primary" download>⬇ Download Resume</a>
+        </div>
+        <div class="about-stats reveal-right">
+          <div class="stats-grid" id="stats-grid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PROJECTS SECTION
+  ═══════════════════════════════════════════════════════ -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Portfolio</span>
+        <h2 class="section-title">My Projects</h2>
+        <div class="title-bar"></div>
+        <p class="section-sub">Data-driven solutions across analytics, machine learning, and business intelligence</p>
+      </div>
+      <!-- Filter tabs (auto-generated from project categories) -->
+      <div class="filter-row reveal" id="project-filters" role="tablist" aria-label="Filter projects by category"></div>
+      <!-- Cards grid (populated by JS) -->
+      <div class="projects-grid" id="projects-grid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       EXPERIENCE SECTION
+  ═══════════════════════════════════════════════════════ -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Career Path</span>
+        <h2 class="section-title">Experience</h2>
+        <div class="title-bar"></div>
+      </div>
+      <div class="timeline" id="timeline" aria-label="Work experience timeline"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SKILLS SECTION
+  ═══════════════════════════════════════════════════════ -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">My Toolkit</span>
+        <h2 class="section-title">Skills</h2>
+        <div class="title-bar"></div>
+      </div>
+      <div class="skills-grid" id="skills-grid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SERVICES SECTION
+  ═══════════════════════════════════════════════════════ -->
+  <section id="services" class="section services-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">How I Help</span>
+        <h2 class="section-title">Services</h2>
+        <div class="title-bar"></div>
+        <p class="section-sub">Practical, outcome-focused services for businesses that want to grow smarter</p>
+      </div>
+      <div class="services-grid" id="services-grid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       TESTIMONIALS SECTION
+  ═══════════════════════════════════════════════════════ -->
+  <section id="testimonials" class="section testimonials-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Social Proof</span>
+        <h2 class="section-title">Testimonials</h2>
+        <div class="title-bar"></div>
+        <p class="section-sub">What clients and collaborators say about working with me</p>
+      </div>
+      <div class="testimonials-grid" id="testimonials-grid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════════════════════════ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Let's Talk</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="title-bar"></div>
+        <p class="section-sub">Whether you have a project in mind or just want to say hi — my inbox is always open.</p>
+      </div>
+      <div class="contact-grid">
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap reveal-left">
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-name">Your Name</label>
+                <input type="text" id="cf-name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="cf-email">Email Address</label>
+                <input type="email" id="cf-email" name="email" placeholder="jane@company.com" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cf-subject">Subject</label>
+              <input type="text" id="cf-subject" name="subject" placeholder="Project collaboration, Freelance work..." required />
+            </div>
+            <div class="form-group">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" placeholder="Tell me about your project or what you need..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="form-submit">
+              <span class="btn-text">Send Message ✉</span>
+              <span class="btn-loading" hidden>Sending…</span>
+            </button>
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+            <p class="form-note">
+              📌 To enable this form, sign up at
+              <a href="https://formspree.io" target="_blank" rel="noopener noreferrer">formspree.io</a>
+              (free) and replace <code>YOUR_FORM_ID</code> in <code>data.js</code>.
+            </p>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info reveal-right">
+          <div id="contact-info-cards"></div>
+          <div class="contact-social" id="contact-social" aria-label="Social profile links"></div>
+          <a id="contact-schedule" href="#" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="margin-top:1.5rem; display:inline-flex;">📅 Schedule a Free Call</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════ -->
+  <footer id="footer">
+
+    <!-- ── Voice Bot Widget ── -->
+    <div class="voicebot" id="voicebot">
+      <button class="vb-toggle" id="vb-toggle" aria-expanded="false" aria-controls="vb-panel" aria-label="Open AI assistant">
+        <span class="vb-avatar">🤖</span>
+        <span class="vb-label">Ask Jeli, AI Assistant</span>
+        <span class="vb-arrow" aria-hidden="true">▲</span>
+      </button>
+      <div class="vb-panel" id="vb-panel" hidden>
+        <div class="vb-chat" id="vb-chat" role="log" aria-label="Chat messages" aria-live="polite">
+          <!-- Messages injected by JS -->
+        </div>
+        <div class="vb-suggestions" id="vb-suggestions">
+          <button class="vb-chip" data-q="What are her skills?">Skills</button>
+          <button class="vb-chip" data-q="Tell me about her projects">Projects</button>
+          <button class="vb-chip" data-q="How can I hire her?">Hire</button>
+          <button class="vb-chip" data-q="What services does she offer?">Services</button>
+          <button class="vb-chip" data-q="What is her experience?">Experience</button>
+        </div>
+        <div class="vb-input-row">
+          <input type="text" id="vb-input" placeholder="Ask me anything about Jelilat…" aria-label="Type your question" />
+          <button id="vb-mic" class="vb-mic-btn" aria-label="Hold to speak" title="Hold to speak">🎤</button>
+          <button id="vb-send" class="vb-send-btn" aria-label="Send message">➤</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Footer Grid ── -->
+    <div class="footer-body">
+      <div class="footer-grid">
+        <!-- Brand col -->
+        <div class="footer-col footer-brand-col">
+          <div class="footer-logo"><span id="footer-initials">JOA</span><span class="brand-dot">.</span></div>
+          <p class="footer-tagline">Business &amp; Technology Generalist — turning data into decisions and ideas into impact.</p>
+          <div class="footer-social" id="footer-social" aria-label="Footer social links"></div>
+        </div>
+        <!-- Quick links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+          </ul>
+        </div>
+        <!-- More links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">More</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a id="footer-resume" href="#" download>⬇ Resume</a></li>
+          </ul>
+        </div>
+        <!-- Contact col -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <ul class="footer-links" id="footer-contact-links"></ul>
+          <a id="footer-schedule" href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" style="margin-top:1rem;">📅 Book a Call</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p id="footer-copy"></p>
+        <a href="#home" class="back-to-top" aria-label="Back to top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCRIPTS — load order matters
+  ═══════════════════════════════════════════════════════ -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/orbs.js"></script>
+  <script src="assets/js/typewriter.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/voicebot.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
