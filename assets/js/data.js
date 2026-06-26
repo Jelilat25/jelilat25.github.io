@@ -81,9 +81,10 @@ const PORTFOLIO_DATA = {
       links: {
         live: "https://app.powerbi.com/view?r=eyJrIjoiNGQxN2IyOTYtNmEwMi00MGZkLWE1MTUtNTQ2MWRlNWEzNmUxIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
         code: ""
-      }
+            }
     },
     {
+
       id:          2,
       title:       "Pizza Sales Report Dashboard",
       description: "Analyzed pizza company sales data to uncover trends, best-selling categories, revenue patterns, and profit margins. Built end-to-end with Excel, SQL, and Power BI.",
@@ -93,9 +94,9 @@ const PORTFOLIO_DATA = {
       category:    "data",
       impact:      "Identified top SKUs · Refined pricing strategy",
       links: {
-        live: "https://project.novypro.com/hg5Hju",
-        code: "https://0d965a53-b68f-4d04-87d7-f1842e32c1c3.filesusr.com/ugd/45a37b_cb3193113df64d97b6f6ba055ffe1901.docx?dn=Pizza_Sales%20SQL%20Queries.docx"
-      }
+        live: "https://app.powerbi.com/view?r=eyJrIjoiZDRjMDA0ZDAtMTIxZi00OTcyLWI2ZjAtNGM3YTk3ZjU2YzIwIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
+        code: "https://github.com/Jelilat25/Pizza_Sales_Report"
+         }
     },
     {
       id:          3,
@@ -107,7 +108,7 @@ const PORTFOLIO_DATA = {
       category:    "python",
       impact:      "Identified gender-specific gaps · Shaped HR retention strategy",
       links: {
-        live:  "https://github.com/Jelilat25/Employee-Wellness-Performance-and-Retention-Analysis",
+        live:  "",
         code:  "https://github.com/Jelilat25/Employee-Wellness-Performance-and-Retention-Analysis"
       }
     },
@@ -121,8 +122,8 @@ const PORTFOLIO_DATA = {
       category:    "data",
       impact:      "Comprehensive decade-spanning trend insights",
       links: {
-        live: "https://www.novypro.com/project/global-terrorism-dashboard-",
-        code: ""
+        live: "https://app.powerbi.com/view?r=eyJrIjoiNGIzYmZlZmMtZmM5YS00ZDEwLWE0MjgtNjY1ZWZjYzgwODM4IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
+        code: "https://github.com/Jelilat25/TASK-INTERN-CAREER"
       }
     },
     {
@@ -149,8 +150,8 @@ const PORTFOLIO_DATA = {
       category:    "data",
       impact:      "Enabled data-driven HR intervention strategies",
       links: {
-        live: "https://www.novypro.com/project/hr-employees-attrition",
-        code: ""
+        live: "https://app.powerbi.com/view?r=eyJrIjoiNjFiNjcxOWYtYzQxMi00YWJmLWE2Y2UtYWJhNDQyNDYyMGJhIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
+        code: "https://github.com/Jelilat25/HR-EMPLOYEE-ATTRITION"
       }
     },
     {
@@ -163,7 +164,7 @@ const PORTFOLIO_DATA = {
       category:    "data",
       impact:      "Uncovered peak risk hours · Road type vulnerability mapped",
       links: {
-        live: "https://0d965a53-b68f-4d04-87d7-f1842e32c1c3.filesusr.com/ugd/45a37b_1ef7ac21de804617a0cca611f171105a.pdf",
+        live: "https://0d965a53-b68f-4d04-87d7-f1842e32c1c3.filesusr.com/RoadAccidentProject.pdf",
         code: ""
       }
     },
@@ -177,8 +178,8 @@ const PORTFOLIO_DATA = {
       category:    "data",
       impact:      "Regional preference mapping · Inventory recommendations",
       links: {
-        live: "https://project.novypro.com/EGCNqK",
-        code: "https://0d965a53-b68f-4d04-87d7-f1842e32c1c3.filesusr.com/ugd/45a37b_ebb01bf6f4984ab1981242b424589c27.docx?dn=BIKE%20SALES%20QUERIES.docx"
+        live: "https://app.powerbi.com/view?r=eyJrIjoiZDY3YWI0Y2ItZjBkZS00NGQ4LTg0M2MtMzE3OTI2MzY5N2I1IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
+        code: "https://github.com/Jelilat25/Bike_Sales_Report_Analysis"
       }
     },
     {
@@ -191,7 +192,7 @@ const PORTFOLIO_DATA = {
       category:    "python",
       impact:      "Pattern identification supporting early diabetes detection",
       links: {
-        live: "https://github.com/Jelilat25/Diabetes-Prediction-Analysis.git",
+        live: "",
         code: "https://github.com/Jelilat25/Diabetes-Prediction-Analysis.git"
       }
     },
@@ -205,8 +206,8 @@ const PORTFOLIO_DATA = {
       category:    "data",
       impact:      "Clear visibility for stakeholder decision-making",
       links: {
-        live: "https://www.novypro.com/project/sales-dashboard--21",
-        code: ""
+        live: "https://app.powerbi.com/view?r=eyJrIjoiMWM3Y2UzZDktNTZiNC00N2I0LWE2ZWQtMzIwYjVmYjg3NzI1IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
+        code: "https://github.com/Jelilat25/SALES-DATA-ANALYSIS"
       }
     },
     {
@@ -219,7 +220,7 @@ const PORTFOLIO_DATA = {
       category:    "business",
       impact:      "Executive-ready insights with strategic recommendations",
       links: {
-        live: "https://www.novypro.com/project/tata-group-online-retail-analysis",
+        live: "https://app.powerbi.com/view?r=eyJrIjoiMWM3Y2UzZDktNTZiNC00N2I0LWE2ZWQtMzIwYjVmYjg3NzI1IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
         code: ""
       }
     },
@@ -233,7 +234,7 @@ const PORTFOLIO_DATA = {
       category:    "python",
       impact:      "15% improvement in audience engagement recommendations",
       links: {
-        live: "https://github.com/Jelilat25/TASK-INTERN-CAREER",
+        live: "",
         code: "https://github.com/Jelilat25/TASK-INTERN-CAREER"
       }
     },
