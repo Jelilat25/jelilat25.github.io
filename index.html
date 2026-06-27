@@ -10,9 +10,10 @@
   <meta property="og:type" content="website" />
   <title>Jelilat Oluwatosin Abdullateef | Data Analyst &amp; Business Generalist</title>
 
+  <!-- Google Fonts: Poppins (headings) + DM Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -71,7 +72,7 @@
     <div class="container hero-grid">
       <div class="hero-content reveal-left">
         <p class="hero-eyebrow">Hello, I'm</p>
-        <h3 class="hero-name" id="hero-name"></h3>
+        <h1 class="hero-name" id="hero-name"></h1>
         <div class="hero-role-row">
           <span class="role-prefix">I'm a&nbsp;</span>
           <span class="role-wrap">
@@ -169,6 +170,16 @@
         <div class="title-bar"></div>
       </div>
       <div class="skills-grid" id="skills-grid"></div>
+
+      <!-- Tools & Technologies subsection (rendered by main.js from data.js → tools[]) -->
+      <div class="tools-subsection reveal">
+        <div class="tools-sub-header">
+          <h3 class="tools-sub-title">Tools &amp; <span class="name-accent">Technologies</span></h3>
+          <div class="title-bar" style="margin:0.85rem 0 0;"></div>
+        </div>
+        <div class="tools-grid" id="tools-grid"></div>
+      </div>
+
     </div>
   </section>
 
@@ -233,7 +244,11 @@
               <span class="btn-loading" hidden>Sending...</span>
             </button>
             <p id="form-status" class="form-status" aria-live="polite"></p>
-           
+            <p class="form-note">
+              To enable this form, sign up at
+              <a href="https://formspree.io" target="_blank" rel="noopener noreferrer">formspree.io</a>
+              (free) and replace <code>YOUR_FORM_ID</code> in <code>data.js</code>.
+            </p>
           </form>
         </div>
         <div class="contact-info reveal-right">
@@ -316,6 +331,17 @@
       <span class="vb-fab-pulse" aria-hidden="true"></span>
     </button>
   </div>
+
+  <!-- ═══ FIXED SCHEDULE 1-1 BUTTON (bottom-left) ═══ -->
+  <a id="schedule-fab" href="#" class="schedule-fab" target="_blank" rel="noopener noreferrer" aria-label="Schedule a 1-on-1 call">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="3" y="4" width="18" height="18" rx="2"/>
+      <line x1="16" y1="2" x2="16" y2="6"/>
+      <line x1="8"  y1="2" x2="8"  y2="6"/>
+      <line x1="3"  y1="10" x2="21" y2="10"/>
+    </svg>
+    <span>Schedule a 1-1</span>
+  </a>
 
   <!-- Scripts -->
   <script src="assets/js/data.js"></script>

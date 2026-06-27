@@ -11,7 +11,7 @@ const PORTFOLIO_DATA = {
   personal: {
     name:       "Jelilat Oluwatosin Abdullateef",
     nameShort:  "Jelilat",
-    initials:   "JELILAT",
+    initials:   "JOA",
     tagline:    "Turning Data Into Decisions & Ideas Into Impact",
     email:      "abdullateefjelilat25@gmail.com",
     phone:      "+234 905 273 9745",
@@ -20,7 +20,7 @@ const PORTFOLIO_DATA = {
     profilePhoto: "assets/images/profile.jpg",     // ← Replace with your photo
     resumeUrl:    "assets/resume/Jelilat_Resume.pdf", // ← Place your PDF here
     scheduleUrl:  "https://cal.com/en/jelilatdatainsights",
-    formspreeId:  "mojoeqrg", // ← Get free ID at formspree.io then replace
+    formspreeId:  "YOUR_FORM_ID", // ← Get free ID at formspree.io then replace
 
     /* Roles that cycle in the hero typewriter — add/remove freely */
     roles: [
@@ -75,40 +75,40 @@ const PORTFOLIO_DATA = {
       title:       "Power BI Cash Management Dashboard",
       description: "Built an interactive Power BI dashboard for Kugler Services LLC to track financial operations, forecast cash balances, and monitor major cash inflows and outflows in real time.",
       image:       "assets/images/projects/cash-management.jpg",
+      placeholder: "https://placehold.co/600x380/8B5CF6/FFFFFF?text=Cash+Management",
       tags:        ["Power BI", "DAX", "Financial Analytics"],
       category:    "data",
       impact:      "30% time savings · Errors reduced by 15%",
       links: {
         live: "https://app.powerbi.com/view?r=eyJrIjoiNGQxN2IyOTYtNmEwMi00MGZkLWE1MTUtNTQ2MWRlNWEzNmUxIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
         code: ""
-            }
+      }
     },
     {
-
       id:          2,
       title:       "Pizza Sales Report Dashboard",
       description: "Analyzed pizza company sales data to uncover trends, best-selling categories, revenue patterns, and profit margins. Built end-to-end with Excel, SQL, and Power BI.",
       image:       "assets/images/projects/pizza-sales.jpg",
-      
+      placeholder: "https://placehold.co/600x380/A78BFA/FFFFFF?text=Pizza+Sales",
       tags:        ["Power BI", "SQL", "Excel", "Business Intelligence"],
       category:    "data",
       impact:      "Identified top SKUs · Refined pricing strategy",
       links: {
-        live: "https://app.powerbi.com/view?r=eyJrIjoiZDRjMDA0ZDAtMTIxZi00OTcyLWI2ZjAtNGM3YTk3ZjU2YzIwIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
-        code: "https://github.com/Jelilat25/Pizza_Sales_Report"
-         }
+        live: "https://project.novypro.com/hg5Hju",
+        code: "https://0d965a53-b68f-4d04-87d7-f1842e32c1c3.filesusr.com/ugd/45a37b_cb3193113df64d97b6f6ba055ffe1901.docx?dn=Pizza_Sales%20SQL%20Queries.docx"
+      }
     },
     {
       id:          3,
       title:       "Employee Wellness & Retention Analysis",
       description: "Explored how wellness program usage relates to performance ratings and retention. Applied correlation analysis, regression, and survival analysis across 42 columns of HR data.",
       image:       "assets/images/projects/employee-wellness.jpg",
-    
+      placeholder: "https://placehold.co/600x380/7C3AED/FFFFFF?text=Employee+Wellness",
       tags:        ["Python", "Pandas", "Seaborn", "Statsmodels"],
       category:    "python",
       impact:      "Identified gender-specific gaps · Shaped HR retention strategy",
       links: {
-        live:  "",
+        live:  "https://github.com/Jelilat25/Employee-Wellness-Performance-and-Retention-Analysis",
         code:  "https://github.com/Jelilat25/Employee-Wellness-Performance-and-Retention-Analysis"
       }
     },
@@ -117,13 +117,13 @@ const PORTFOLIO_DATA = {
       title:       "Global Terrorism Analysis (1979–2017)",
       description: "Cleaned, processed, and visualized global terrorism data spanning four decades. Built an interactive Power BI dashboard highlighting key patterns across regions and incident types.",
       image:       "assets/images/projects/terrorism.jpg",
-
+      placeholder: "https://placehold.co/600x380/6D28D9/FFFFFF?text=Global+Terrorism",
       tags:        ["Power BI", "Data Cleaning", "Data Visualization"],
       category:    "data",
       impact:      "Comprehensive decade-spanning trend insights",
       links: {
-        live: "https://app.powerbi.com/view?r=eyJrIjoiNGIzYmZlZmMtZmM5YS00ZDEwLWE0MjgtNjY1ZWZjYzgwODM4IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
-        code: "https://github.com/Jelilat25/TASK-INTERN-CAREER"
+        live: "https://www.novypro.com/project/global-terrorism-dashboard-",
+        code: ""
       }
     },
     {
@@ -131,7 +131,7 @@ const PORTFOLIO_DATA = {
       title:       "Online Retail Performance Dashboard",
       description: "Multi-year (2019–2023) KPI dashboard tracking sales, profit, customer satisfaction, and category performance. Enabled seasonality analysis and quick year-over-year comparison.",
       image:       "assets/images/projects/online-retail.jpg",
-
+      placeholder: "https://placehold.co/600x380/8B5CF6/F5F5F5?text=Online+Retail",
       tags:        ["Power BI", "DAX", "Excel", "Business Intelligence"],
       category:    "data",
       impact:      "Optimized inventory planning · Revealed seasonal patterns",
@@ -145,13 +145,13 @@ const PORTFOLIO_DATA = {
       title:       "HR Employee Attrition Dashboard",
       description: "Power BI dashboard surfacing workforce trends, attrition factors, business travel impact, performance ratings, and employee well-being indicators for HR teams.",
       image:       "assets/images/projects/hr-attrition.jpg",
-     
+      placeholder: "https://placehold.co/600x380/A78BFA/1A0A2E?text=HR+Attrition",
       tags:        ["Power BI", "SQL", "Excel", "HR Analytics"],
       category:    "data",
       impact:      "Enabled data-driven HR intervention strategies",
       links: {
-        live: "https://app.powerbi.com/view?r=eyJrIjoiNjFiNjcxOWYtYzQxMi00YWJmLWE2Y2UtYWJhNDQyNDYyMGJhIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
-        code: "https://github.com/Jelilat25/HR-EMPLOYEE-ATTRITION"
+        live: "https://www.novypro.com/project/hr-employees-attrition",
+        code: ""
       }
     },
     {
@@ -159,12 +159,12 @@ const PORTFOLIO_DATA = {
       title:       "Road Accident Analytics (2021–2022)",
       description: "Analyzed 417,883 road casualties to surface patterns in timing, road types, vehicle categories, and urban vs rural distribution. Findings inform road safety policy.",
       image:       "assets/images/projects/road-accidents.jpg",
-      
+      placeholder: "https://placehold.co/600x380/5B21B6/FFFFFF?text=Road+Accident",
       tags:        ["Power BI", "Data Analysis", "Public Safety"],
       category:    "data",
       impact:      "Uncovered peak risk hours · Road type vulnerability mapped",
       links: {
-        live: "https://0d965a53-b68f-4d04-87d7-f1842e32c1c3.filesusr.com/RoadAccidentProject.pdf",
+        live: "https://0d965a53-b68f-4d04-87d7-f1842e32c1c3.filesusr.com/ugd/45a37b_1ef7ac21de804617a0cca611f171105a.pdf",
         code: ""
       }
     },
@@ -173,13 +173,13 @@ const PORTFOLIO_DATA = {
       title:       "Bike Sales Analysis",
       description: "Comprehensive study of bicycle sales trends, customer behavior, and regional preferences using Excel, SQL Server, and Power BI. Delivered detailed reports and interactive dashboards.",
       image:       "assets/images/projects/bike-sales.jpg",
-     
+      placeholder: "https://placehold.co/600x380/7C3AED/F0EAFF?text=Bike+Sales",
       tags:        ["Power BI", "SQL", "Excel", "Sales Analytics"],
       category:    "data",
       impact:      "Regional preference mapping · Inventory recommendations",
       links: {
-        live: "https://app.powerbi.com/view?r=eyJrIjoiZDY3YWI0Y2ItZjBkZS00NGQ4LTg0M2MtMzE3OTI2MzY5N2I1IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
-        code: "https://github.com/Jelilat25/Bike_Sales_Report_Analysis"
+        live: "https://project.novypro.com/EGCNqK",
+        code: "https://0d965a53-b68f-4d04-87d7-f1842e32c1c3.filesusr.com/ugd/45a37b_ebb01bf6f4984ab1981242b424589c27.docx?dn=BIKE%20SALES%20QUERIES.docx"
       }
     },
     {
@@ -187,12 +187,12 @@ const PORTFOLIO_DATA = {
       title:       "Diabetes Prediction Analysis",
       description: "Analyzed National Institute of Diabetes medical data to predict diabetes in Pima Indian females. Applied classification models and predictive analytics using Python.",
       image:       "assets/images/projects/diabetes.jpg",
-    
+      placeholder: "https://placehold.co/600x380/8B5CF6/FFFFFF?text=Diabetes+Prediction",
       tags:        ["Python", "Machine Learning", "Healthcare Analytics"],
       category:    "python",
       impact:      "Pattern identification supporting early diabetes detection",
       links: {
-        live: "",
+        live: "https://github.com/Jelilat25/Diabetes-Prediction-Analysis.git",
         code: "https://github.com/Jelilat25/Diabetes-Prediction-Analysis.git"
       }
     },
@@ -201,13 +201,13 @@ const PORTFOLIO_DATA = {
       title:       "Sales Report Dashboard",
       description: "Power BI project delivering detailed analysis of sales metrics including product seating, quantities, revenue, product margins, total orders, and best sellers.",
       image:       "assets/images/projects/sales-report.jpg",
-     
+      placeholder: "https://placehold.co/600x380/A78BFA/1A0A2E?text=Sales+Report",
       tags:        ["Power BI", "DAX", "Sales Analytics"],
       category:    "data",
       impact:      "Clear visibility for stakeholder decision-making",
       links: {
-        live: "https://app.powerbi.com/view?r=eyJrIjoiMWM3Y2UzZDktNTZiNC00N2I0LWE2ZWQtMzIwYjVmYjg3NzI1IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
-        code: "https://github.com/Jelilat25/SALES-DATA-ANALYSIS"
+        live: "https://www.novypro.com/project/sales-dashboard--21",
+        code: ""
       }
     },
     {
@@ -215,12 +215,12 @@ const PORTFOLIO_DATA = {
       title:       "Tata Group Online Retail Analysis",
       description: "Forage job simulation for Tata Group: cleaned retail data, visualized revenue trends and customer demographics in Power BI, and delivered C-suite ready presentations.",
       image:       "assets/images/projects/tata-group.jpg",
-    
+      placeholder: "https://placehold.co/600x380/6D28D9/FFFFFF?text=Tata+Group",
       tags:        ["Power BI", "Business Analysis", "Data Storytelling"],
       category:    "business",
       impact:      "Executive-ready insights with strategic recommendations",
       links: {
-        live: "https://app.powerbi.com/view?r=eyJrIjoiMWM3Y2UzZDktNTZiNC00N2I0LWE2ZWQtMzIwYjVmYjg3NzI1IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
+        live: "https://www.novypro.com/project/tata-group-online-retail-analysis",
         code: ""
       }
     },
@@ -229,12 +229,12 @@ const PORTFOLIO_DATA = {
       title:       "YouTube Streamers Analysis",
       description: "Analyzed the top 1,000 YouTube streamers to uncover audience trends, performance metrics, content categories, and brand collaboration patterns using Python.",
       image:       "assets/images/projects/youtube.jpg",
-    
+      placeholder: "https://placehold.co/600x380/7C3AED/FFFFFF?text=YouTube+Streamers",
       tags:        ["Python", "Pandas", "Seaborn", "Matplotlib"],
       category:    "python",
       impact:      "15% improvement in audience engagement recommendations",
       links: {
-        live: "",
+        live: "https://github.com/Jelilat25/TASK-INTERN-CAREER",
         code: "https://github.com/Jelilat25/TASK-INTERN-CAREER"
       }
     },
@@ -428,43 +428,126 @@ const PORTFOLIO_DATA = {
   ],
 
   /* ─── SERVICES ───────────────────────────────────────────
-     To add a service: copy a block below and add to array.   */
+     To add a service: copy a block below and add to array.
+     image:       path to your image file (add to assets/images/services/)
+     placeholder: shown until a real image is added            */
   services: [
     {
-      icon:        "📊",
       title:       "Data Analytics & Dashboards",
       description: "Transform raw data into clear, interactive dashboards using Power BI, Tableau, and Excel. From financial tracking to sales performance — I build visuals that drive real decisions.",
-      tags:        ["Power BI", "Tableau", "Excel", "SQL"]
+      tags:        ["Power BI", "Tableau", "Excel", "SQL"],
+      image:       "assets/images/services/analytics.jpg",
+      placeholder: "https://placehold.co/600x338/0F172A/6D28D9?text=Data+Analytics"
     },
     {
-      icon:        "🧪",
       title:       "Product Analytics",
       description: "Analyze user behavior, funnel drop-offs, and product KPIs to help teams build better products. I turn product data into prioritized, actionable next steps.",
-      tags:        ["Funnel Analysis", "KPI Dashboards", "User Metrics"]
+      tags:        ["Funnel Analysis", "KPI Dashboards", "User Metrics"],
+      image:       "assets/images/services/product-analytics.jpg",
+      placeholder: "https://placehold.co/600x338/0F172A/6D28D9?text=Product+Analytics"
     },
     {
-      icon:        "🎯",
       title:       "Lead Generation & Outreach",
       description: "Build targeted prospect lists, write cold outreach sequences, and set up automated pipelines using Apollo and HubSpot. Fill your pipeline with quality, qualified leads.",
-      tags:        ["Apollo.io", "HubSpot", "Email Sequences"]
+      tags:        ["Apollo.io", "HubSpot", "Email Sequences"],
+      image:       "assets/images/services/lead-gen.jpg",
+      placeholder: "https://placehold.co/600x338/0F172A/6D28D9?text=Lead+Generation"
     },
     {
-      icon:        "🤝",
       title:       "Sales & Account Management",
       description: "From first contact to long-term retention — I manage client relationships, handle cold calling, and coordinate between teams to deliver consistent, reliable results.",
-      tags:        ["Cold Calling", "CRM Management", "Client Retention"]
+      tags:        ["Cold Calling", "CRM Management", "Client Retention"],
+      image:       "assets/images/services/sales.jpg",
+      placeholder: "https://placehold.co/600x338/0F172A/6D28D9?text=Sales+%26+Account+Mgmt"
     },
     {
-      icon:        "🔍",
       title:       "QA Testing",
       description: "Manual QA with structured test cases, bug tracking, and usability review. I help ensure your product works exactly as intended before it reaches your users.",
-      tags:        ["Test Cases", "Bug Tracking", "UAT"]
+      tags:        ["Test Cases", "Bug Tracking", "UAT"],
+      image:       "assets/images/services/qa-testing.jpg",
+      placeholder: "https://placehold.co/600x338/0F172A/6D28D9?text=QA+Testing"
     },
     {
-      icon:        "📋",
       title:       "Business Analysis & Reporting",
       description: "Research, analyze, and present insights that help businesses make smarter decisions. From sponsorship trackers to C-suite reports — I translate complexity into clarity.",
-      tags:        ["Research", "Stakeholder Reports", "Strategy"]
+      tags:        ["Research", "Stakeholder Reports", "Strategy"],
+      image:       "assets/images/services/business-analysis.jpg",
+      placeholder: "https://placehold.co/600x338/0F172A/6D28D9?text=Business+Analysis"
+    }
+  ],
+
+  /* ─── TOOLS & TECHNOLOGIES ───────────────────────────────
+     To add a tool:  copy a block, paste at end of array.
+     imgUrl:      Simple Icons CDN URL  (https://simpleicons.org for slugs)
+     customText:  shown if no imgUrl — e.g. "AP" for Apollo
+     color:       icon tint / card accent (hex)
+
+     Simple Icons CDN format:
+       https://cdn.simpleicons.org/{slug}/{hex-without-#}       */
+  tools: [
+    // ── Data & Analytics ──────────────────────────────────
+    {
+      name:     "Power BI",
+      imgUrl:   "https://cdn.simpleicons.org/microsoftpowerbi/F2C811",
+      color:    "#F2C811"
+    },
+    {
+      name:     "Python",
+      imgUrl:   "https://cdn.simpleicons.org/python/3776AB",
+      color:    "#3776AB"
+    },
+    {
+      name:     "SQL",
+      imgUrl:   "https://cdn.simpleicons.org/postgresql/4169E1",
+      color:    "#4169E1"
+    },
+    {
+      name:     "Excel",
+      imgUrl:   "https://cdn.simpleicons.org/microsoftexcel/217346",
+      color:    "#217346"
+    },
+    {
+      name:     "Tableau",
+      imgUrl:   "https://cdn.simpleicons.org/tableau/E97627",
+      color:    "#E97627"
+    },
+    {
+      name:     "Google Sheets",
+      imgUrl:   "https://cdn.simpleicons.org/googlesheets/34A853",
+      color:    "#34A853"
+    },
+    // ── Sales & CRM ───────────────────────────────────────
+    {
+      name:     "HubSpot",
+      imgUrl:   "https://cdn.simpleicons.org/hubspot/FF7A59",
+      color:    "#FF7A59"
+    },
+    {
+      name:     "Apollo.io",
+      imgUrl:   "",
+      customText: "AP",
+      color:    "#6D28D9"
+    },
+    {
+      name:     "LinkedIn Sales",
+      imgUrl:   "https://cdn.simpleicons.org/linkedin/0A66C2",
+      color:    "#0A66C2"
+    },
+    // ── Development & Tools ───────────────────────────────
+    {
+      name:     "Pandas",
+      imgUrl:   "https://cdn.simpleicons.org/pandas/150458",
+      color:    "#150458"
+    },
+    {
+      name:     "Jupyter",
+      imgUrl:   "https://cdn.simpleicons.org/jupyter/F37626",
+      color:    "#F37626"
+    },
+    {
+      name:     "GitHub",
+      imgUrl:   "https://cdn.simpleicons.org/github/181717",
+      color:    "#181717"
     }
   ],
 

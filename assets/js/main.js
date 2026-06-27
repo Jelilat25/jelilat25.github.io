@@ -28,14 +28,43 @@
       .replace(/>/g, '&gt;');
   }
 
-  /* Social icon map — using compact unicode that renders as text, not emoji */
+  /* Social brand metadata
+     type "img"  → Simple Icons CDN image (white on dark circle)
+     type "svg"  → inline SVG path
+     type "text" → short text abbreviation (for brands without icons) */
   const SOCIAL_META = {
-    linkedin:  { icon: 'in',  label: 'LinkedIn'  },
-    github:    { icon: 'gh',  label: 'GitHub'    },
-    novypro:   { icon: 'np',  label: 'NovyPro'   },
-    contra:    { icon: 'ct',  label: 'Contra'    },
-    email:     { icon: '@',   label: 'Email'     },
-    whatsapp:  { icon: 'wa',  label: 'WhatsApp'  },
+    linkedin: {
+      type: 'img',
+      src:  'https://cdn.simpleicons.org/linkedin/FFFFFF',
+      label: 'LinkedIn'
+    },
+    github: {
+      type: 'img',
+      src:  'https://cdn.simpleicons.org/github/FFFFFF',
+      label: 'GitHub'
+    },
+    whatsapp: {
+      type: 'img',
+      src:  'https://cdn.simpleicons.org/whatsapp/FFFFFF',
+      label: 'WhatsApp'
+    },
+    novypro: {
+      type: 'text',
+      text: 'NV',
+      label: 'NovyPro'
+    },
+    contra: {
+      type: 'text',
+      text: 'CO',
+      label: 'Contra'
+    },
+    email: {
+      type: 'svg',
+      svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>`,
+      label: 'Email'
+    }
   };
 
   /* ════════════════════════════════════════════════════════════
@@ -295,14 +324,24 @@
   }
 
   /* ════════════════════════════════════════════════════════════
-     9. SERVICES — numbered badge replaces emoji icon
+     9. SERVICES — numbered badge + optional image
   ═════════════════════════════════════════════════════════════*/
   function renderServices() {
     const grid = $('#services-grid');
     if (!grid || !D.services) return;
 
-    grid.innerHTML = D.services.map((svc, i) => `
+    grid.innerHTML = D.services.map((svc, i) => {
+      /* Image block — shown if image or placeholder exists */
+      const imgBlock = (svc.image || svc.placeholder) ? `
+        <div class="service-img-wrap">
+          <img src="${svc.image || svc.placeholder}"
+               alt="${safe(svc.title)}" loading="lazy"
+               onerror="this.src='${svc.placeholder}'" />
+        </div>` : '';
+
+      return `
       <div class="service-card reveal">
+        ${imgBlock}
         <div class="service-number">0${i + 1}</div>
         <div class="service-title">${safe(svc.title)}</div>
         <p class="service-desc">${safe(svc.description)}</p>
@@ -310,7 +349,8 @@
           ${(svc.tags || []).map(t => `<span class="service-tag">${safe(t)}</span>`).join('')}
         </div>
         <a href="#contact" class="service-cta">Get in Touch &rarr;</a>
-      </div>`).join('');
+      </div>`;
+    }).join('');
   }
 
   /* ════════════════════════════════════════════════════════════
@@ -415,42 +455,74 @@
   }
 
   /* ════════════════════════════════════════════════════════════
-     SOCIAL LINKS HELPER
-     mode "pill"   → compact circle icons in hero + contact
-     mode "footer" → smaller circle icons in dark footer
+     SOCIAL LINKS HELPER — brand logo circles (Image 2 style)
+     mode "pill"   → hero & contact (44 px dark circles)
+     mode "footer" → footer (34 px dark circles)
   ═════════════════════════════════════════════════════════════*/
   function renderSocialLinks(selector, social, mode) {
     const container = $(selector);
     if (!container || !social) return;
 
     const links = Object.entries(social).filter(([, url]) => url);
+    const isFooter = mode === 'footer';
+    const size     = isFooter ? 34 : 44;
+    const imgSize  = isFooter ? 18 : 22;
 
-    if (mode === 'pill') {
-      /* Icon-only circles — no text label */
-      container.innerHTML = links.map(([key, url]) => {
-        const meta = SOCIAL_META[key] || { icon: key.slice(0,2).toUpperCase(), label: key };
-        return `<a href="${url}" class="social-icon-link"
-                   target="_blank" rel="noopener noreferrer"
-                   aria-label="${meta.label}" title="${meta.label}">
-                  <span style="font-family:'Syne',sans-serif;font-size:0.72rem;font-weight:800;letter-spacing:0.04em;">${meta.icon}</span>
-                </a>`;
-      }).join('');
+    container.innerHTML = links.map(([key, url]) => {
+      const meta = SOCIAL_META[key] || { type: 'text', text: key.slice(0,2).toUpperCase(), label: key };
 
-    } else if (mode === 'footer') {
-      container.innerHTML = links.map(([key, url]) => {
-        const meta = SOCIAL_META[key] || { icon: key.slice(0,2).toUpperCase(), label: key };
-        return `<a href="${url}" class="footer-social-link"
-                   target="_blank" rel="noopener noreferrer"
-                   aria-label="${meta.label}" title="${meta.label}">
-                  <span style="font-family:'Syne',sans-serif;font-size:0.65rem;font-weight:800;">${meta.icon}</span>
-                </a>`;
-      }).join('');
-    }
+      /* Build inner content based on icon type */
+      let inner = '';
+      if (meta.type === 'img') {
+        inner = `<img src="${meta.src}" alt="${meta.label}" width="${imgSize}" height="${imgSize}" loading="lazy" />`;
+      } else if (meta.type === 'svg') {
+        inner = meta.svg;
+      } else {
+        inner = `<span class="brand-text">${meta.text}</span>`;
+      }
+
+      const cls = isFooter ? 'footer-social-link social-brand-link' : 'social-brand-link';
+      return `<a href="${url}" class="${cls}"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="${meta.label}" title="${meta.label}"
+                 style="width:${size}px;height:${size}px;">
+                ${inner}
+              </a>`;
+    }).join('');
   }
 
   /* ════════════════════════════════════════════════════════════
-     13. CONTACT FORM
+     NEW: TOOLS & TECHNOLOGIES GRID
+     Reads D.tools[] from data.js — add/remove tools there.
   ═════════════════════════════════════════════════════════════*/
+  function renderTools() {
+    const grid = $('#tools-grid');
+    if (!grid || !D.tools) return;
+
+    grid.innerHTML = D.tools.map(tool => {
+      /* Icon: CDN image, fallback to customText badge */
+      const iconInner = tool.imgUrl
+        ? `<img src="${tool.imgUrl}" alt="${safe(tool.name)}" loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+           <span class="tool-icon-text" style="display:none;">${safe(tool.customText || tool.name.slice(0,2).toUpperCase())}</span>`
+        : `<span class="tool-icon-text">${safe(tool.customText || tool.name.slice(0,2).toUpperCase())}</span>`;
+
+      return `
+      <div class="tool-card">
+        <div class="tool-icon-wrap">${iconInner}</div>
+        <span class="tool-name">${safe(tool.name)}</span>
+      </div>`;
+    }).join('');
+  }
+
+  /* ════════════════════════════════════════════════════════════
+     NEW: WIRE SCHEDULE FAB href from data.js
+  ═════════════════════════════════════════════════════════════*/
+  function initScheduleFab() {
+    const fab = $('#schedule-fab');
+    if (fab) fab.href = D.personal.scheduleUrl;
+  }
+
   function initContactForm() {
     const form   = $('#contact-form');
     const status = $('#form-status');
@@ -534,6 +606,9 @@
     renderTestimonials();
     renderContact();
     renderFooter();
+
+    renderTools();
+    initScheduleFab();
 
     initContactForm();
 
