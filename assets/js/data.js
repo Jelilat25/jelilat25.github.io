@@ -11,16 +11,16 @@ const PORTFOLIO_DATA = {
   personal: {
     name:       "Jelilat Oluwatosin Abdullateef",
     nameShort:  "Jelilat",
-    initials:   "JOA",
+    initials:   "JELILAT",
     tagline:    "Turning Data Into Decisions & Ideas Into Impact",
-    email:      "abdullateefjelilat25@gmail.com",
+    email:      "jelilatoluwatosinabdullateef@gmail.com",
     phone:      "+234 905 273 9745",
     whatsapp:   "+234 907 586 0492",
     location:   "Lagos, Nigeria",
     profilePhoto: "assets/images/profile.jpg",     // ← Replace with your photo
     resumeUrl:    "assets/resume/Jelilat_Resume.pdf", // ← Place your PDF here
     scheduleUrl:  "https://cal.com/en/jelilatdatainsights",
-    formspreeId:  "YOUR_FORM_ID", // ← Get free ID at formspree.io then replace
+    formspreeId:  "mojoeqrg", // ← Get free ID at formspree.io then replace
 
     /* Roles that cycle in the hero typewriter — add/remove freely */
     roles: [
@@ -40,7 +40,7 @@ const PORTFOLIO_DATA = {
       github:   "https://github.com/Jelilat25",
       novypro:  "https://www.novypro.com/profile_projects/jelilatdatainsights",
       contra:   "https://contra.com/JelilatDataInsights",
-      email:    "mailto:abdullateefjelilat25@gmail.com",
+      email:    "mailto:jelilatoluwatosinabdullateef@gmail.com",
       whatsapp: "https://wa.me/2349075860492"
     }
   },
@@ -94,8 +94,8 @@ const PORTFOLIO_DATA = {
       category:    "data",
       impact:      "Identified top SKUs · Refined pricing strategy",
       links: {
-        live: "https://project.novypro.com/hg5Hju",
-        code: "https://0d965a53-b68f-4d04-87d7-f1842e32c1c3.filesusr.com/ugd/45a37b_cb3193113df64d97b6f6ba055ffe1901.docx?dn=Pizza_Sales%20SQL%20Queries.docx"
+        live: "https://app.powerbi.com/view?r=eyJrIjoiZDRjMDA0ZDAtMTIxZi00OTcyLWI2ZjAtNGM3YTk3ZjU2YzIwIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
+        code: "https://github.com/Jelilat25/Pizza_Sales_Report"
       }
     },
     {
@@ -108,7 +108,7 @@ const PORTFOLIO_DATA = {
       category:    "python",
       impact:      "Identified gender-specific gaps · Shaped HR retention strategy",
       links: {
-        live:  "https://github.com/Jelilat25/Employee-Wellness-Performance-and-Retention-Analysis",
+        live:  "",
         code:  "https://github.com/Jelilat25/Employee-Wellness-Performance-and-Retention-Analysis"
       }
     },
@@ -122,8 +122,8 @@ const PORTFOLIO_DATA = {
       category:    "data",
       impact:      "Comprehensive decade-spanning trend insights",
       links: {
-        live: "https://www.novypro.com/project/global-terrorism-dashboard-",
-        code: ""
+         live: "https://app.powerbi.com/view?r=eyJrIjoiNGIzYmZlZmMtZmM5YS00ZDEwLWE0MjgtNjY1ZWZjYzgwODM4IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
+        code: "https://github.com/Jelilat25/TASK-INTERN-CAREER"
       }
     },
     {
@@ -150,8 +150,8 @@ const PORTFOLIO_DATA = {
       category:    "data",
       impact:      "Enabled data-driven HR intervention strategies",
       links: {
-        live: "https://www.novypro.com/project/hr-employees-attrition",
-        code: ""
+        live: "https://app.powerbi.com/view?r=eyJrIjoiNjFiNjcxOWYtYzQxMi00YWJmLWE2Y2UtYWJhNDQyNDYyMGJhIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
+        code: "https://github.com/Jelilat25/HR-EMPLOYEE-ATTRITION"
       }
     },
     {
@@ -164,7 +164,7 @@ const PORTFOLIO_DATA = {
       category:    "data",
       impact:      "Uncovered peak risk hours · Road type vulnerability mapped",
       links: {
-        live: "https://0d965a53-b68f-4d04-87d7-f1842e32c1c3.filesusr.com/ugd/45a37b_1ef7ac21de804617a0cca611f171105a.pdf",
+        live: "https://0d965a53-b68f-4d04-87d7-f1842e32c1c3.filesusr.com/RoadAccidentProject.pdf",
         code: ""
       }
     },
@@ -178,8 +178,8 @@ const PORTFOLIO_DATA = {
       category:    "data",
       impact:      "Regional preference mapping · Inventory recommendations",
       links: {
-        live: "https://project.novypro.com/EGCNqK",
-        code: "https://0d965a53-b68f-4d04-87d7-f1842e32c1c3.filesusr.com/ugd/45a37b_ebb01bf6f4984ab1981242b424589c27.docx?dn=BIKE%20SALES%20QUERIES.docx"
+        live: "https://app.powerbi.com/view?r=eyJrIjoiZDY3YWI0Y2ItZjBkZS00NGQ4LTg0M2MtMzE3OTI2MzY5N2I1IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
+        code: "https://github.com/Jelilat25/Bike_Sales_Report_Analysis"
       }
     },
     {
@@ -192,7 +192,7 @@ const PORTFOLIO_DATA = {
       category:    "python",
       impact:      "Pattern identification supporting early diabetes detection",
       links: {
-        live: "https://github.com/Jelilat25/Diabetes-Prediction-Analysis.git",
+        live: "",
         code: "https://github.com/Jelilat25/Diabetes-Prediction-Analysis.git"
       }
     },
@@ -206,8 +206,8 @@ const PORTFOLIO_DATA = {
       category:    "data",
       impact:      "Clear visibility for stakeholder decision-making",
       links: {
-        live: "https://www.novypro.com/project/sales-dashboard--21",
-        code: ""
+        live: "https://app.powerbi.com/view?r=eyJrIjoiMWM3Y2UzZDktNTZiNC00N2I0LWE2ZWQtMzIwYjVmYjg3NzI1IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
+        code: "https://github.com/Jelilat25/SALES-DATA-ANALYSIS"
       }
     },
     {
@@ -220,7 +220,7 @@ const PORTFOLIO_DATA = {
       category:    "business",
       impact:      "Executive-ready insights with strategic recommendations",
       links: {
-        live: "https://www.novypro.com/project/tata-group-online-retail-analysis",
+        live: "https://app.powerbi.com/view?r=eyJrIjoiMWM3Y2UzZDktNTZiNC00N2I0LWE2ZWQtMzIwYjVmYjg3NzI1IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
         code: ""
       }
     },
@@ -234,7 +234,7 @@ const PORTFOLIO_DATA = {
       category:    "python",
       impact:      "15% improvement in audience engagement recommendations",
       links: {
-        live: "https://github.com/Jelilat25/TASK-INTERN-CAREER",
+        live: "",
         code: "https://github.com/Jelilat25/TASK-INTERN-CAREER"
       }
     },
@@ -261,6 +261,20 @@ const PORTFOLIO_DATA = {
   experience: [
     {
       id:        1,
+      company:   "CR Equity AI",
+      role:      "Product Analyst",
+      duration:  "AUG 2025 – Present",    // ← Edit your actual dates
+      type:      "Full-time",
+      icon:      "🏢",
+      highlights: [
+        "Updated and organized Jira tickets, using structured documentation to keep product tasks clear and easy to follow",
+        "Tested platform features and reported issues, applying analytical skills to improve user experience",
+        "Trained new workers and platform users, using simple explanations to support smooth onboarding.",
+      ]
+    },
+
+        {
+       id:        2,
       company:   "Perpetuum Designs",
       role:      "Account Manager",
       duration:  "2024 – Present",    // ← Edit your actual dates
@@ -273,8 +287,10 @@ const PORTFOLIO_DATA = {
         "Monitored project feedback and client experience to improve service quality and strengthen client retention rates."
       ]
     },
+
+
     {
-      id:        2,
+      id:        3,
       company:   "Venture for Africa",
       role:      "Business Analyst",
       duration:  "2023 – 2024",       // ← Edit your actual dates
@@ -288,7 +304,7 @@ const PORTFOLIO_DATA = {
       ]
     },
     {
-      id:        3,
+      id:        4,
       company:   "Excelerate",
       role:      "Data Visualization Analyst",
       duration:  "2023",              // ← Edit your actual dates
@@ -301,7 +317,7 @@ const PORTFOLIO_DATA = {
       ]
     },
     {
-      id:        4,
+      id:        5,
       company:   "Taste DNA",
       role:      "Freelance Data Analyst",
       duration:  "2022 – 2023",       // ← Edit your actual dates
@@ -315,12 +331,12 @@ const PORTFOLIO_DATA = {
       ]
     },
     {
-      id:        5,
+      id:        6,
       company:   "Kugler Services LLC",
       role:      "Freelance Data Analyst",
       duration:  "2022",              // ← Edit your actual dates
       type:      "Freelance",
-      icon:      "💰",
+      icon:      "📈",
       highlights: [
         "Engineered a dynamic Power BI cash management dashboard, achieving 30% time savings in financial tracking.",
         "Automated cash forecasting processes, uncovering expenditure trends that enhanced budget allocation accuracy.",
@@ -329,7 +345,7 @@ const PORTFOLIO_DATA = {
       ]
     },
     {
-      id:        6,
+      id:        7,
       company:   "Intern Career",
       role:      "Data Analyst Intern",
       duration:  "2022",              // ← Edit your actual dates
@@ -342,12 +358,12 @@ const PORTFOLIO_DATA = {
       ]
     },
     {
-      id:        7,
+      id:        8,
       company:   "MeriSKILL",
       role:      "Data Analyst Intern",
       duration:  "2021 – 2022",       // ← Edit your actual dates
       type:      "Internship",
-      icon:      "🔬",
+      icon:      "🎓",
       highlights: [
         "Predicted diabetes likelihood among Pima Indian females using Python predictive analytics and classification models.",
         "Conducted sales data analysis with Power BI and Excel — identified trends, improved forecasting, and generated insights.",
@@ -355,7 +371,7 @@ const PORTFOLIO_DATA = {
       ]
     },
     {
-      id:        8,
+      id:        9,
       company:   "Crownford Model School",
       role:      "Mathematics Teacher",
       duration:  "2019 – 2021",       // ← Edit your actual dates
@@ -443,7 +459,7 @@ const PORTFOLIO_DATA = {
       title:       "Product Analytics",
       description: "Analyze user behavior, funnel drop-offs, and product KPIs to help teams build better products. I turn product data into prioritized, actionable next steps.",
       tags:        ["Funnel Analysis", "KPI Dashboards", "User Metrics"],
-      image:       "assets/images/services/product-analytics.jpg",
+      image:       "assets/images/services/pizza-sales.jpg",
       placeholder: "https://placehold.co/600x338/0F172A/6D28D9?text=Product+Analytics"
     },
     {
@@ -488,7 +504,7 @@ const PORTFOLIO_DATA = {
     // ── Data & Analytics ──────────────────────────────────
     {
       name:     "Power BI",
-      imgUrl:   "https://cdn.simpleicons.org/microsoftpowerbi/F2C811",
+      imgUrl:   "https://toppng.com/uploads/preview/ower-icon-png-power-bi-logo-11563587695xbemzdsvxd.png",
       color:    "#F2C811"
     },
     {
@@ -503,12 +519,12 @@ const PORTFOLIO_DATA = {
     },
     {
       name:     "Excel",
-      imgUrl:   "https://cdn.simpleicons.org/microsoftexcel/217346",
+      imgUrl:   "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/microsoft-excel-icon.png",
       color:    "#217346"
     },
     {
       name:     "Tableau",
-      imgUrl:   "https://cdn.simpleicons.org/tableau/E97627",
+      imgUrl:   "https://banner2.cleanpng.com/20180629/ktb/aayqpeivj.webp",
       color:    "#E97627"
     },
     {
@@ -524,13 +540,12 @@ const PORTFOLIO_DATA = {
     },
     {
       name:     "Apollo.io",
-      imgUrl:   "",
-      customText: "AP",
+      imgUrl:   "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/apollo-icon.png",
       color:    "#6D28D9"
     },
     {
       name:     "LinkedIn Sales",
-      imgUrl:   "https://cdn.simpleicons.org/linkedin/0A66C2",
+      imgUrl:   "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-icon.png",
       color:    "#0A66C2"
     },
     // ── Development & Tools ───────────────────────────────
@@ -608,8 +623,8 @@ const PORTFOLIO_DATA = {
      Edit the greeting and keyword responses for the footer bot.
      Add more keywords by adding properties to `responses`.    */
   voicebot: {
-    name:     "Jeli",
-    greeting: "Hi there! I'm Jeli, Jelilat's AI assistant. Ask me about her skills, projects, or how to hire her!",
+    name:     "Tosin",
+    greeting: "Hi there! I'm Tosin, Jelilat's AI assistant. Ask me about her skills, projects, or how to hire her!",
     responses: {
       skills:     "Jelilat is skilled in Power BI, Python, SQL, Excel, and Tableau for data — plus Apollo, HubSpot, and cold calling on the sales side. She also does QA testing and product analytics.",
       python:     "Yes! Jelilat uses Python for data analysis and machine learning. She's worked with Pandas, Seaborn, Matplotlib, SciPy, and statsmodels on real client projects.",
