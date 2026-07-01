@@ -36,27 +36,7 @@
     if (icon.svgPath) {
       return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="${icon.svgPath}"/></svg>`;
     }
-    return `<span class="sidebar-text">${safe(icon.customText || icon.label.slice(0,2).toUpperCase())}</span>`;
-  }
-
-  /* ════════════════════════════════════════════════════════════
-     NEW: SIDEBAR NAV — injects social icons vertically
-  ═════════════════════════════════════════════════════════════*/
-  function renderSidebar() {
-    const container = $('#sidebar-icons');
-    if (!container) return;
-    const icons = D.personal.socialIcons || [];
-    container.innerHTML = icons
-      .filter(ic => ic.visible !== false)
-      .map(ic => `
-        <a href="${ic.url}"
-           class="sidebar-icon-link${ic.showHover ? ' has-hover' : ''}"
-           target="${ic.url.startsWith('mailto') ? '_self' : '_blank'}"
-           rel="noopener noreferrer"
-           aria-label="${safe(ic.label)}"
-           title="${safe(ic.label)}">
-          ${buildIconInner(ic, 18)}
-        </a>`).join('');
+    return `<span class="brand-text">${safe(icon.customText || icon.label.slice(0,2).toUpperCase())}</span>`;
   }
 
   /* ════════════════════════════════════════════════════════════
@@ -542,7 +522,6 @@
     const fab = $('#schedule-fab');
     if (fab) fab.href = D.personal.scheduleUrl;
   }
-  
   function initContactForm() {
     const form   = $('#contact-form');
     const status = $('#form-status');
@@ -629,7 +608,6 @@
 
     renderTools();
     initScheduleFab();
-    renderSidebar();
     applySectionColors();
 
     initContactForm();

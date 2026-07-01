@@ -499,14 +499,14 @@ const PORTFOLIO_DATA = {
       title:       "Data Analytics & Dashboards",
       description: "Transform raw data into clear, interactive dashboards using Power BI, Tableau, and Excel. From financial tracking to sales performance — I build visuals that drive real decisions.",
       tags:        ["Power BI", "Tableau", "Excel", "SQL"],
-      image:       "assets/images/services/analytics.jpg",
+      image:       "assets/images/services/pizza-sales.jpg",
       placeholder: "https://placehold.co/600x338/0F172A/6D28D9?text=Data+Analytics"
     },
     {
       title:       "Product Analytics",
       description: "Analyze user behavior, funnel drop-offs, and product KPIs to help teams build better products. I turn product data into prioritized, actionable next steps.",
       tags:        ["Funnel Analysis", "KPI Dashboards", "User Metrics"],
-      image:       "assets/images/services/pizza-sales.jpg",
+      image:       "assets/images/services/product-analytics.jpg",
       placeholder: "https://placehold.co/600x338/0F172A/6D28D9?text=Product+Analytics"
     },
     {
@@ -607,43 +607,43 @@ const PORTFOLIO_DATA = {
   testimonials: [
     {
       id:          1,
-      name:        "Client Name",
-      role:        "CEO, Company Name",
-      photo:       "assets/images/testimonials/t1.jpg",
+      name:        "Tobi Lafinhan",                           // ← Replace
+      role:        "Co-Founder, Venture for Africa",                     // ← Replace
+      photo:       "assets/images/testimonials/t1.jpg",    // ← Replace with your screenshot
       placeholder: "https://placehold.co/520x320/1A0A2E/8B5CF6?text=Testimonial+Screenshot",
       rating:      5,
-      viewLink:    "#",
-      type:        "link"
+      viewLink:    "https://www.linkedin.com/in/jelilat/",   // ← Replace with real link or PDF URL
+      type:        "link" // "link" or "pdf"
     },
     {
       id:          2,
-      name:        "Client Name",
-      role:        "Head of Sales, Company Name",
+      name:        "Joshua Kugler",
+      role:        "CEO, Kugler Services LLC",
       photo:       "assets/images/testimonials/t2.jpg",
       placeholder: "https://placehold.co/520x320/1A0A2E/A78BFA?text=Testimonial+Screenshot",
       rating:      5,
-      viewLink:    "#",
+      viewLink:    "https://www.upwork.com/ab/g/pub/wom/prx/eyJwZXJzb25VaWQiOiIxNzY3OTg5MzY5MjE2ODU2MDY0IiwiY29udHJhY3RSaWQiOiIzNjg4OTY4MCIsImJhbm5lclR5cGUiOiJjb250cmFjdCIsImJhbm5lclZhcmlhbnQiOiJkZWZhdWx0Iiwid29tIjoiZmx2MiIsInJlZGlyZWN0IjoiZmxfcHJvZmlsZV9wcm9tbyJ9",
       type:        "link"
     },
     {
       id:          3,
-      name:        "Client Name",
-      role:        "Product Manager, Company Name",
+      name:        "Ameer Hamza",
+      role:        "Virtual Assistant, Talenthunters",
       photo:       "assets/images/testimonials/t3.jpg",
       placeholder: "https://placehold.co/520x320/1A0A2E/7C3AED?text=Testimonial+Screenshot",
       rating:      5,
-      viewLink:    "#",
-      type:        "pdf"
+      viewLink:    "https://www.upwork.com/ab/g/pub/wom/prx/eyJwZXJzb25VaWQiOiIxNzY3OTg5MzY5MjE2ODU2MDY0IiwiY29udHJhY3RSaWQiOiIzOTg5MjY5MiIsImJhbm5lclR5cGUiOiJjb250cmFjdCIsImJhbm5lclZhcmlhbnQiOiJkZWZhdWx0Iiwid29tIjoiZmx2MiIsInJlZGlyZWN0IjoiZmxfcHJvZmlsZV9wcm9tbyJ9",
+      type:        "link"
     },
     {
       id:          4,
-      name:        "Client Name",
-      role:        "Founder, Startup Name",
+      name:        "Excelerate Team",
+      role:        "Excelerate",
       photo:       "assets/images/testimonials/t4.jpg",
       placeholder: "https://placehold.co/520x320/1A0A2E/6D28D9?text=Testimonial+Screenshot",
       rating:      5,
-      viewLink:    "#",
-      type:        "link"
+      viewLink:    "https://drive.google.com/file/d/1vyWiyoPIcnh2vBWhCk0odAD6GrKHz53m/view",
+      type:        "pdf"
     }
   ],
 
