@@ -6,7 +6,7 @@
 
 /* ─── 1. CSS VARIABLES ─────────────────────────────────────── */
 :root {
-  /* ── Light Theme ── */
+/* ── Light Theme ── */
   --bg:          #FFFFFF;
   --bg-alt:      #F8F6FF;
   --bg-card:     #FFFFFF;
@@ -16,7 +16,7 @@
   --body:        #4B5563;
   --muted:       #94A3B8;
   --primary:     #6D28D9;
-  --primary-h:   #4C1D95;
+  --primary-h:    #4C1D95;
   --primary-l:   #7C3AED;
   --nav-bg:      rgba(255,255,255,0.96);
   --shadow-sm:   0 1px 8px rgba(15,23,42,0.07);
@@ -29,7 +29,7 @@
   --btn-bg:      #0F172A;
   --btn-text:    #FFFFFF;
   --btn-bdr:     transparent;
-  --link:        #6D28D9;
+  --link:        #755f9a;
   --glow:        rgba(109,40,217,0.08);
 }
 
