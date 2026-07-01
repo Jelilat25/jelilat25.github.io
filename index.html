@@ -67,9 +67,19 @@
     </div>
   </nav>
 
+  <!-- ═══ VERTICAL SIDEBAR NAV (Image 2 style) ═══ -->
+  <aside class="sidebar-nav" id="sidebar-nav" aria-label="Sidebar navigation">
+    <div class="sidebar-icons" id="sidebar-icons">
+      <!-- Icons injected by main.js from data.js socialIcons -->
+    </div>
+    <div class="sidebar-line"></div>
+  </aside>
+
   <!-- ═══ HERO ═══ -->
   <section id="home" class="section hero-section">
-    <div class="container hero-grid">
+    <div class="hero-inner">
+
+      <!-- Left: Content -->
       <div class="hero-content reveal-left">
         <p class="hero-eyebrow">Hello, I'm</p>
         <h1 class="hero-name" id="hero-name"></h1>
@@ -85,8 +95,11 @@
           <a href="#contact"  class="btn btn-hero-hire">Hire Me</a>
           <a href="#projects" class="btn btn-hero-view">View Work</a>
         </div>
+        <!-- Social icons row (below buttons, matching Image 2) -->
         <div class="hero-social" id="hero-social" aria-label="Social links"></div>
       </div>
+
+      <!-- Right: Profile photo -->
       <div class="hero-visual reveal-right">
         <div class="profile-rig">
           <div class="rig-ring rig-ring-outer"></div>
@@ -100,7 +113,9 @@
           <div class="skill-badge badge-br">Business</div>
         </div>
       </div>
+
     </div>
+
     <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
       <div class="scroll-dot"></div>
     </a>
@@ -244,7 +259,7 @@
               <span class="btn-loading" hidden>Sending...</span>
             </button>
             <p id="form-status" class="form-status" aria-live="polite"></p>
-           
+
           </form>
         </div>
         <div class="contact-info reveal-right">
@@ -303,7 +318,7 @@
       <div class="vb-panel-header">
         <div class="vb-avatar-text">AI</div>
         <div class="vb-header-info">
-          <strong>Tosin</strong>
+          <strong>Jeli</strong>
           <span>Jelilat's AI Assistant</span>
         </div>
         <button class="vb-close-btn" id="vb-close" aria-label="Close assistant">&times;</button>

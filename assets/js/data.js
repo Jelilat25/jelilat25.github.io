@@ -6,8 +6,7 @@
 
 const PORTFOLIO_DATA = {
 
-  /* ─── PERSONAL INFO ─────────────────────────────────────
-     Edit name, email, phone, photo, resume path, etc.     */
+  /* ─── PERSONAL INFO ───────────────────────────────────── */
   personal: {
     name:       "Jelilat Oluwatosin Abdullateef",
     nameShort:  "Jelilat",
@@ -17,12 +16,11 @@ const PORTFOLIO_DATA = {
     phone:      "+234 905 273 9745",
     whatsapp:   "+234 907 586 0492",
     location:   "Lagos, Nigeria",
-    profilePhoto: "assets/images/profile.jpg",     // ← Replace with your photo
-    resumeUrl:    "assets/resume/Jelilat_Resume.pdf", // ← Place your PDF here
+    profilePhoto: "assets/images/profile.jpg",
+    resumeUrl:    "assets/resume/Jelilat_Resume.pdf",
     scheduleUrl:  "https://cal.com/en/jelilatdatainsights",
-    formspreeId:  "mojoeqrg", // ← Get free ID at formspree.io then replace
+    formspreeId:  "mojoeqrg",
 
-    /* Roles that cycle in the hero typewriter — add/remove freely */
     roles: [
       "Data Analyst",
       "Product Analyst",
@@ -34,7 +32,6 @@ const PORTFOLIO_DATA = {
       "Business Problem Solver"
     ],
 
-    /* Social links */
     social: {
       linkedin: "https://www.linkedin.com/in/jelilat/",
       github:   "https://github.com/Jelilat25",
@@ -42,33 +39,94 @@ const PORTFOLIO_DATA = {
       contra:   "https://contra.com/JelilatDataInsights",
       email:    "mailto:jelilatoluwatosinabdullateef@gmail.com",
       whatsapp: "https://wa.me/2349075860492"
-    }
+    },
+
+    /* ─── SOCIAL ICON SETTINGS ─────────────────────────────
+       Edit each icon independently:
+       url       → where clicking takes the user
+       imgUrl    → logo image (use Simple Icons CDN or your own)
+                   Format: https://cdn.simpleicons.org/{slug}/{hex}
+       label     → accessible name (tooltip + screen reader)
+       iconColor → tint applied to the icon in the dark circle
+                   (use "white" for white logos, or a hex like "#0A66C2")
+       showHover → true = subtle lift on hover, false = no hover at all
+       visible   → set false to hide an icon without deleting it        */
+    socialIcons: [
+      {
+        key:        "linkedin",
+        url:        "https://www.linkedin.com/in/jelilat/",
+        imgUrl:     "https://cdn.simpleicons.org/linkedin/FFFFFF",
+        label:      "LinkedIn",
+        iconColor:  "white",
+        showHover:  false,
+        visible:    true
+      },
+      {
+        key:        "github",
+        url:        "https://github.com/Jelilat25",
+        imgUrl:     "https://cdn.simpleicons.org/github/FFFFFF",
+        label:      "GitHub",
+        iconColor:  "white",
+        showHover:  false,
+        visible:    true
+      },
+      {
+        key:        "novypro",
+        url:        "https://www.novypro.com/profile_projects/jelilatdatainsights",
+        imgUrl:     "",            /* ← add your own image URL here */
+        label:      "NovyPro",
+        customText: "NV",         /* shown when imgUrl is empty */
+        iconColor:  "white",
+        showHover:  false,
+        visible:    true
+      },
+      {
+        key:        "contra",
+        url:        "https://contra.com/JelilatDataInsights",
+        imgUrl:     "",
+        label:      "Contra",
+        customText: "CO",
+        iconColor:  "white",
+        showHover:  false,
+        visible:    true
+      },
+      {
+        key:        "email",
+        url:        "mailto:jelilatoluwatosinabdullateef@gmail.com",
+        imgUrl:     "",
+        label:      "Email",
+        /* inline SVG envelope — change to imgUrl if you prefer */
+        svgPath:    "M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z",
+        iconColor:  "white",
+        showHover:  false,
+        visible:    true
+      },
+      {
+        key:        "whatsapp",
+        url:        "https://wa.me/2349075860492",
+        imgUrl:     "https://cdn.simpleicons.org/whatsapp/FFFFFF",
+        label:      "WhatsApp",
+        iconColor:  "white",
+        showHover:  false,
+        visible:    true
+      }
+    ]
   },
 
-  /* ─── ABOUT ──────────────────────────────────────────────
-     Edit your bio paragraphs and stat counters here.       */
+  /* ─── ABOUT ─────────────────────────────────────────────── */
   about: {
     bio:  `I'm a business and technology generalist who bridges the gap between data, product, and people. With 4+ years spanning data analytics, product management, QA, sales, and lead generation — I don't just analyze problems, I solve them end-to-end.`,
     bio2: `From building Power BI dashboards that transform financial tracking, to managing client pipelines in HubSpot and shipping better products through QA — I bring clarity, reliability, and measurable impact to every engagement. Trusted by clients across retail, F&B, architecture, and talent markets.`,
 
-    /* Animated counter cards — edit label, value, and suffix */
     stats: [
-      { value: 4,  suffix: "+", label: "Years Experience"    },
-      { value: 12, suffix: "+", label: "Projects Delivered"  },
-      { value: 8,  suffix: "+", label: "Roles Mastered"      },
-      { value: 5,  suffix: "+", label: "Industries Served"   }
+      { value: 4,  suffix: "+", label: "Years Experience"   },
+      { value: 12, suffix: "+", label: "Projects Delivered" },
+      { value: 8,  suffix: "+", label: "Roles Mastered"     },
+      { value: 5,  suffix: "+", label: "Industries Served"  }
     ]
   },
 
-  /* ─── PROJECTS ───────────────────────────────────────────
-     To add a new project: copy one object block below,
-     paste it at the top of this array, and fill in fields.
-
-     CATEGORIES available: "data" | "python" | "product" | "business"
-     Add new categories freely — the filter tabs auto-generate.
-
-     For image: add your file to assets/images/projects/
-     The placeholder is shown if the image file doesn't exist yet. */
+  /* ─── PROJECTS ──────────────────────────────────────────── */
   projects: [
     {
       id:          1,
@@ -108,8 +166,8 @@ const PORTFOLIO_DATA = {
       category:    "python",
       impact:      "Identified gender-specific gaps · Shaped HR retention strategy",
       links: {
-        live:  "",
-        code:  "https://github.com/Jelilat25/Employee-Wellness-Performance-and-Retention-Analysis"
+        live: "",
+        code: "https://github.com/Jelilat25/Employee-Wellness-Performance-and-Retention-Analysis"
       }
     },
     {
@@ -122,7 +180,7 @@ const PORTFOLIO_DATA = {
       category:    "data",
       impact:      "Comprehensive decade-spanning trend insights",
       links: {
-         live: "https://app.powerbi.com/view?r=eyJrIjoiNGIzYmZlZmMtZmM5YS00ZDEwLWE0MjgtNjY1ZWZjYzgwODM4IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
+        live: "https://app.powerbi.com/view?r=eyJrIjoiNGIzYmZlZmMtZmM5YS00ZDEwLWE0MjgtNjY1ZWZjYzgwODM4IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
         code: "https://github.com/Jelilat25/TASK-INTERN-CAREER"
       }
     },
@@ -254,30 +312,26 @@ const PORTFOLIO_DATA = {
     }
   ],
 
-  /* ─── EXPERIENCE ─────────────────────────────────────────
-     To add a new role: copy one block below and paste at top.
-     Edit company, role, duration, type, and highlights.
-     type options: "Full-time" | "Contract" | "Freelance" | "Internship" */
+  /* ─── EXPERIENCE ────────────────────────────────────────── */
   experience: [
     {
       id:        1,
       company:   "CR Equity AI",
       role:      "Product Analyst",
-      duration:  "AUG 2025 – Present",    // ← Edit your actual dates
+      duration:  "AUG 2025 – Present",
       type:      "Full-time",
       icon:      "🏢",
       highlights: [
-        "Updated and organized Jira tickets, using structured documentation to keep product tasks clear and easy to follow",
-        "Tested platform features and reported issues, applying analytical skills to improve user experience",
-        "Trained new workers and platform users, using simple explanations to support smooth onboarding.",
+        "Updated and organized Jira tickets, using structured documentation to keep product tasks clear and easy to follow.",
+        "Tested platform features and reported issues, applying analytical skills to improve user experience.",
+        "Trained new workers and platform users, using simple explanations to support smooth onboarding."
       ]
     },
-
-        {
-       id:        2,
+    {
+      id:        2,
       company:   "Perpetuum Designs",
       role:      "Account Manager",
-      duration:  "2024 – Present",    // ← Edit your actual dates
+      duration:  "2024 – Present",
       type:      "Full-time",
       icon:      "🏢",
       highlights: [
@@ -287,13 +341,11 @@ const PORTFOLIO_DATA = {
         "Monitored project feedback and client experience to improve service quality and strengthen client retention rates."
       ]
     },
-
-
     {
       id:        3,
       company:   "Venture for Africa",
       role:      "Business Analyst",
-      duration:  "2023 – 2024",       // ← Edit your actual dates
+      duration:  "2023 – 2024",
       type:      "Contract",
       icon:      "🌍",
       highlights: [
@@ -307,7 +359,7 @@ const PORTFOLIO_DATA = {
       id:        4,
       company:   "Excelerate",
       role:      "Data Visualization Analyst",
-      duration:  "2023",              // ← Edit your actual dates
+      duration:  "2023",
       type:      "Contract",
       icon:      "📈",
       highlights: [
@@ -320,7 +372,7 @@ const PORTFOLIO_DATA = {
       id:        5,
       company:   "Taste DNA",
       role:      "Freelance Data Analyst",
-      duration:  "2022 – 2023",       // ← Edit your actual dates
+      duration:  "2022 – 2023",
       type:      "Freelance",
       icon:      "🍽️",
       highlights: [
@@ -334,7 +386,7 @@ const PORTFOLIO_DATA = {
       id:        6,
       company:   "Kugler Services LLC",
       role:      "Freelance Data Analyst",
-      duration:  "2022",              // ← Edit your actual dates
+      duration:  "2022",
       type:      "Freelance",
       icon:      "📈",
       highlights: [
@@ -348,7 +400,7 @@ const PORTFOLIO_DATA = {
       id:        7,
       company:   "Intern Career",
       role:      "Data Analyst Intern",
-      duration:  "2022",              // ← Edit your actual dates
+      duration:  "2022",
       type:      "Internship",
       icon:      "🎓",
       highlights: [
@@ -361,7 +413,7 @@ const PORTFOLIO_DATA = {
       id:        8,
       company:   "MeriSKILL",
       role:      "Data Analyst Intern",
-      duration:  "2021 – 2022",       // ← Edit your actual dates
+      duration:  "2021 – 2022",
       type:      "Internship",
       icon:      "🎓",
       highlights: [
@@ -374,7 +426,7 @@ const PORTFOLIO_DATA = {
       id:        9,
       company:   "Crownford Model School",
       role:      "Mathematics Teacher",
-      duration:  "2019 – 2021",       // ← Edit your actual dates
+      duration:  "2019 – 2021",
       type:      "Full-time",
       icon:      "📚",
       highlights: [
@@ -385,9 +437,7 @@ const PORTFOLIO_DATA = {
     }
   ],
 
-  /* ─── SKILLS ─────────────────────────────────────────────
-     Edit group names, icons, colors, skill names, and levels (0–100).
-     To add a skill group: copy a block below and add to array.  */
+  /* ─── SKILLS ────────────────────────────────────────────── */
   skills: [
     {
       group: "Data & Analytics",
@@ -407,12 +457,12 @@ const PORTFOLIO_DATA = {
       icon:  "🎯",
       color: "#A78BFA",
       items: [
-        { name: "Apollo.io",         level: 85 },
-        { name: "HubSpot",           level: 80 },
-        { name: "Lead Generation",   level: 88 },
-        { name: "Cold Calling",      level: 85 },
-        { name: "Account Management",level: 90 },
-        { name: "Client Acquisition",level: 85 }
+        { name: "Apollo.io",          level: 85 },
+        { name: "HubSpot",            level: 80 },
+        { name: "Lead Generation",    level: 88 },
+        { name: "Cold Calling",       level: 85 },
+        { name: "Account Management", level: 90 },
+        { name: "Client Acquisition", level: 85 }
       ]
     },
     {
@@ -420,12 +470,12 @@ const PORTFOLIO_DATA = {
       icon:  "🔬",
       color: "#7C3AED",
       items: [
-        { name: "Product Management",  level: 78 },
-        { name: "Product Analytics",   level: 82 },
-        { name: "QA Testing",          level: 80 },
-        { name: "User Research",        level: 75 },
-        { name: "Requirements Analysis",level: 82 },
-        { name: "Roadmap Planning",    level: 75 }
+        { name: "Product Management",   level: 78 },
+        { name: "Product Analytics",    level: 82 },
+        { name: "QA Testing",           level: 80 },
+        { name: "User Research",         level: 75 },
+        { name: "Requirements Analysis", level: 82 },
+        { name: "Roadmap Planning",     level: 75 }
       ]
     },
     {
@@ -443,23 +493,20 @@ const PORTFOLIO_DATA = {
     }
   ],
 
-  /* ─── SERVICES ───────────────────────────────────────────
-     To add a service: copy a block below and add to array.
-     image:       path to your image file (add to assets/images/services/)
-     placeholder: shown until a real image is added            */
+  /* ─── SERVICES ──────────────────────────────────────────── */
   services: [
     {
       title:       "Data Analytics & Dashboards",
       description: "Transform raw data into clear, interactive dashboards using Power BI, Tableau, and Excel. From financial tracking to sales performance — I build visuals that drive real decisions.",
       tags:        ["Power BI", "Tableau", "Excel", "SQL"],
-      image:       "assets/images/services/pizza-sales.jpg",
+      image:       "assets/images/services/analytics.jpg",
       placeholder: "https://placehold.co/600x338/0F172A/6D28D9?text=Data+Analytics"
     },
     {
       title:       "Product Analytics",
       description: "Analyze user behavior, funnel drop-offs, and product KPIs to help teams build better products. I turn product data into prioritized, actionable next steps.",
       tags:        ["Funnel Analysis", "KPI Dashboards", "User Metrics"],
-      image:       "assets/images/services/product-analytics.jpg",
+      image:       "assets/images/services/pizza-sales.jpg",
       placeholder: "https://placehold.co/600x338/0F172A/6D28D9?text=Product+Analytics"
     },
     {
@@ -492,136 +539,115 @@ const PORTFOLIO_DATA = {
     }
   ],
 
-  /* ─── TOOLS & TECHNOLOGIES ───────────────────────────────
-     To add a tool:  copy a block, paste at end of array.
-     imgUrl:      Simple Icons CDN URL  (https://simpleicons.org for slugs)
-     customText:  shown if no imgUrl — e.g. "AP" for Apollo
-     color:       icon tint / card accent (hex)
-
-     Simple Icons CDN format:
-       https://cdn.simpleicons.org/{slug}/{hex-without-#}       */
+  /* ─── TOOLS & TECHNOLOGIES ──────────────────────────────── */
   tools: [
-    // ── Data & Analytics ──────────────────────────────────
     {
-      name:     "Power BI",
-      imgUrl:   "https://toppng.com/uploads/preview/ower-icon-png-power-bi-logo-11563587695xbemzdsvxd.png",
-      color:    "#F2C811"
+      name:   "Power BI",
+      imgUrl: "https://toppng.com/uploads/preview/ower-icon-png-power-bi-logo-11563587695xbemzdsvxd.png",
+      color:  "#F2C811"
     },
     {
-      name:     "Python",
-      imgUrl:   "https://cdn.simpleicons.org/python/3776AB",
-      color:    "#3776AB"
+      name:   "Python",
+      imgUrl: "https://cdn.simpleicons.org/python/3776AB",
+      color:  "#3776AB"
     },
     {
-      name:     "SQL",
-      imgUrl:   "https://cdn.simpleicons.org/postgresql/4169E1",
-      color:    "#4169E1"
+      name:   "SQL",
+      imgUrl: "https://cdn.simpleicons.org/postgresql/4169E1",
+      color:  "#4169E1"
     },
     {
-      name:     "Excel",
-      imgUrl:   "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/microsoft-excel-icon.png",
-      color:    "#217346"
+      name:   "Excel",
+      imgUrl: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/microsoft-excel-icon.png",
+      color:  "#217346"
     },
     {
-      name:     "Tableau",
-      imgUrl:   "https://banner2.cleanpng.com/20180629/ktb/aayqpeivj.webp",
-      color:    "#E97627"
+      name:   "Tableau",
+      imgUrl: "https://banner2.cleanpng.com/20180629/ktb/aayqpeivj.webp",
+      color:  "#E97627"
     },
     {
-      name:     "Google Sheets",
-      imgUrl:   "https://cdn.simpleicons.org/googlesheets/34A853",
-      color:    "#34A853"
-    },
-    // ── Sales & CRM ───────────────────────────────────────
-    {
-      name:     "HubSpot",
-      imgUrl:   "https://cdn.simpleicons.org/hubspot/FF7A59",
-      color:    "#FF7A59"
+      name:   "Google Sheets",
+      imgUrl: "https://cdn.simpleicons.org/googlesheets/34A853",
+      color:  "#34A853"
     },
     {
-      name:     "Apollo.io",
-      imgUrl:   "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/apollo-icon.png",
-      color:    "#6D28D9"
+      name:   "HubSpot",
+      imgUrl: "https://cdn.simpleicons.org/hubspot/FF7A59",
+      color:  "#FF7A59"
     },
     {
-      name:     "LinkedIn Sales",
-      imgUrl:   "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-icon.png",
-      color:    "#0A66C2"
-    },
-    // ── Development & Tools ───────────────────────────────
-    {
-      name:     "Pandas",
-      imgUrl:   "https://cdn.simpleicons.org/pandas/150458",
-      color:    "#150458"
+      name:       "Apollo.io",
+      imgUrl:     "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/apollo-icon.png",
+      color:      "#6D28D9"
     },
     {
-      name:     "Jupyter",
-      imgUrl:   "https://cdn.simpleicons.org/jupyter/F37626",
-      color:    "#F37626"
+      name:   "LinkedIn Sales",
+      imgUrl: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-icon.png",
+      color:  "#0A66C2"
     },
     {
-      name:     "GitHub",
-      imgUrl:   "https://cdn.simpleicons.org/github/181717",
-      color:    "#181717"
+      name:   "Pandas",
+      imgUrl: "https://cdn.simpleicons.org/pandas/150458",
+      color:  "#150458"
+    },
+    {
+      name:   "Jupyter",
+      imgUrl: "https://cdn.simpleicons.org/jupyter/F37626",
+      color:  "#F37626"
+    },
+    {
+      name:   "GitHub",
+      imgUrl: "https://cdn.simpleicons.org/github/181717",
+      color:  "#181717"
     }
   ],
 
-  /* ─── TESTIMONIALS ───────────────────────────────────────
-     Each card shows a PHOTO of the testimonial (screenshot/image)
-     plus name, role, and a link/PDF to view the full testimonial.
-
-     To add a testimonial:
-     1. Save a screenshot/photo of the testimonial to assets/images/testimonials/
-     2. Copy a block below and fill in the fields
-     3. Set type: "link" for a URL, or "pdf" for a downloadable PDF
-
-     The placeholder image is shown until a real one is added.  */
+  /* ─── TESTIMONIALS ──────────────────────────────────────── */
   testimonials: [
     {
       id:          1,
-      name:        "Tobi Lafinhan",                           // ← Replace
-      role:        "Co-Founder, Venture for Africa",                     // ← Replace
-      photo:       "assets/images/testimonials/t1.jpg",    // ← Replace with your screenshot
+      name:        "Client Name",
+      role:        "CEO, Company Name",
+      photo:       "assets/images/testimonials/t1.jpg",
       placeholder: "https://placehold.co/520x320/1A0A2E/8B5CF6?text=Testimonial+Screenshot",
       rating:      5,
-      viewLink:    "https://www.linkedin.com/in/jelilat/",   // ← Replace with real link or PDF URL
-      type:        "link" // "link" or "pdf"
+      viewLink:    "#",
+      type:        "link"
     },
     {
       id:          2,
-      name:        "Joshua Kugler",
-      role:        "CEO, Kugler Services LLC",
+      name:        "Client Name",
+      role:        "Head of Sales, Company Name",
       photo:       "assets/images/testimonials/t2.jpg",
       placeholder: "https://placehold.co/520x320/1A0A2E/A78BFA?text=Testimonial+Screenshot",
       rating:      5,
-      viewLink:    "https://www.upwork.com/ab/g/pub/wom/prx/eyJwZXJzb25VaWQiOiIxNzY3OTg5MzY5MjE2ODU2MDY0IiwiY29udHJhY3RSaWQiOiIzNjg4OTY4MCIsImJhbm5lclR5cGUiOiJjb250cmFjdCIsImJhbm5lclZhcmlhbnQiOiJkZWZhdWx0Iiwid29tIjoiZmx2MiIsInJlZGlyZWN0IjoiZmxfcHJvZmlsZV9wcm9tbyJ9",
+      viewLink:    "#",
       type:        "link"
     },
     {
       id:          3,
-      name:        "Ameer Hamza",
-      role:        "Virtual Assistant, Talenthunters",
+      name:        "Client Name",
+      role:        "Product Manager, Company Name",
       photo:       "assets/images/testimonials/t3.jpg",
       placeholder: "https://placehold.co/520x320/1A0A2E/7C3AED?text=Testimonial+Screenshot",
       rating:      5,
-      viewLink:    "https://www.upwork.com/ab/g/pub/wom/prx/eyJwZXJzb25VaWQiOiIxNzY3OTg5MzY5MjE2ODU2MDY0IiwiY29udHJhY3RSaWQiOiIzOTg5MjY5MiIsImJhbm5lclR5cGUiOiJjb250cmFjdCIsImJhbm5lclZhcmlhbnQiOiJkZWZhdWx0Iiwid29tIjoiZmx2MiIsInJlZGlyZWN0IjoiZmxfcHJvZmlsZV9wcm9tbyJ9",
-      type:        "link"
+      viewLink:    "#",
+      type:        "pdf"
     },
     {
       id:          4,
-      name:        "Excelerate Team",
-      role:        "Excelerate",
+      name:        "Client Name",
+      role:        "Founder, Startup Name",
       photo:       "assets/images/testimonials/t4.jpg",
       placeholder: "https://placehold.co/520x320/1A0A2E/6D28D9?text=Testimonial+Screenshot",
       rating:      5,
-      viewLink:    "https://drive.google.com/file/d/1vyWiyoPIcnh2vBWhCk0odAD6GrKHz53m/view",
-      type:        "pdf"
+      viewLink:    "#",
+      type:        "link"
     }
   ],
 
-  /* ─── VOICE BOT ──────────────────────────────────────────
-     Edit the greeting and keyword responses for the footer bot.
-     Add more keywords by adding properties to `responses`.    */
+  /* ─── VOICE BOT ─────────────────────────────────────────── */
   voicebot: {
     name:     "Tosin",
     greeting: "Hi there! I'm Tosin, Jelilat's AI assistant. Ask me about her skills, projects, or how to hire her!",
@@ -630,13 +656,105 @@ const PORTFOLIO_DATA = {
       python:     "Yes! Jelilat uses Python for data analysis and machine learning. She's worked with Pandas, Seaborn, Matplotlib, SciPy, and statsmodels on real client projects.",
       powerbi:    "Power BI is one of Jelilat's strongest tools. She's built dashboards for financial tracking, HR analytics, sales reporting, and more — all interactive and auto-refreshing.",
       projects:   "Jelilat has delivered 12+ projects including cash management dashboards, HR analytics, road accident analysis, diabetes prediction, and YouTube streamers analysis.",
-      experience: "Jelilat has 4+ years of experience across data analytics, product management, QA testing, sales, and lead generation — spanning 8 roles across 5+ industries.",
-      hire:       "You can hire Jelilat via the Contact form on this page, send an email to abdullateefjelilat25@gmail.com, or schedule a 1-on-1 call at cal.com/en/jelilatdatainsights",
-      contact:    "You can reach Jelilat by email at abdullateefjelilat25@gmail.com, WhatsApp at +2349075860492, or LinkedIn at linkedin.com/in/jelilat/",
+      experience: "Jelilat has 4+ years of experience across data analytics, product management, QA testing, sales, and lead generation — spanning 9 roles across 5+ industries.",
+      hire:       "You can hire Jelilat via the Contact form on this page, send an email to jelilatoluwatosinabdullateef@gmail.com, or schedule a 1-on-1 call at cal.com/en/jelilatdatainsights",
+      contact:    "You can reach Jelilat by email at jelilatoluwatosinabdullateef@gmail.com, WhatsApp at +2349075860492, or LinkedIn at linkedin.com/in/jelilat/",
       services:   "Jelilat offers: Data Analytics & Dashboards, Product Analytics, Lead Generation, Sales & Account Management, QA Testing, and Business Analysis & Reporting.",
       location:   "Jelilat is based in Lagos, Nigeria, and works with clients remotely from anywhere in the world.",
       resume:     "You can download Jelilat's resume using the Resume button in the navigation bar or the footer of this page.",
       default:    "I can answer questions about Jelilat's skills, projects, experience, services, or how to hire her. What would you like to know?"
+    }
+  },
+
+  /* ─── SECTION COLORS ──────────────────────────────────────
+     Control each section's heading, body text, background,
+     accent/primary colour, and button colours independently.
+
+     Leave any field as "" to inherit the global theme default.
+
+     Fields per section:
+       heading   → h1/h2/h3 colour          (e.g. "#FFFFFF")
+       body      → paragraph / body text     (e.g. "#9CA3AF")
+       bg        → section background        (e.g. "#0A0712")
+       accent    → highlight / primary       (e.g. "#6D28D9")
+       btnBg     → button background         (e.g. "#0F172A")
+       btnText   → button text colour        (e.g. "#FFFFFF")
+       border    → card / divider borders    (e.g. "#1F1A3A")
+
+     DARK theme colours shown below as defaults.
+     Edit freely — changes apply on next page load.            */
+  sectionColors: {
+    home: {
+      heading: "",        /* "" = use global --heading variable */
+      body:    "",
+      bg:      "",        /* transparent — canvas shows through */
+      accent:  "",
+      btnBg:   "",
+      btnText: "",
+      border:  ""
+    },
+    about: {
+      heading: "",
+      body:    "",
+      bg:      "",        /* set to e.g. "#0A0712" to override */
+      accent:  "",
+      btnBg:   "",
+      btnText: "",
+      border:  ""
+    },
+    projects: {
+      heading: "",
+      body:    "",
+      bg:      "",
+      accent:  "",
+      btnBg:   "",
+      btnText: "",
+      border:  ""
+    },
+    experience: {
+      heading: "",
+      body:    "",
+      bg:      "",
+      accent:  "",
+      btnBg:   "",
+      btnText: "",
+      border:  ""
+    },
+    skills: {
+      heading: "",
+      body:    "",
+      bg:      "",
+      accent:  "",
+      btnBg:   "",
+      btnText: "",
+      border:  ""
+    },
+    services: {
+      heading: "",
+      body:    "",
+      bg:      "",
+      accent:  "",
+      btnBg:   "",
+      btnText: "",
+      border:  ""
+    },
+    testimonials: {
+      heading: "",
+      body:    "",
+      bg:      "",
+      accent:  "",
+      btnBg:   "",
+      btnText: "",
+      border:  ""
+    },
+    contact: {
+      heading: "",
+      body:    "",
+      bg:      "",
+      accent:  "",
+      btnBg:   "",
+      btnText: "",
+      border:  ""
     }
   }
 };

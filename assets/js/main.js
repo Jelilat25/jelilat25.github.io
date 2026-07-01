@@ -28,44 +28,101 @@
       .replace(/>/g, '&gt;');
   }
 
-  /* Social brand metadata
-     type "img"  → Simple Icons CDN image (white on dark circle)
-     type "svg"  → inline SVG path
-     type "text" → short text abbreviation (for brands without icons) */
-  const SOCIAL_META = {
-    linkedin: {
-      type: 'img',
-      src:  'https://cdn.simpleicons.org/linkedin/FFFFFF',
-      label: 'LinkedIn'
-    },
-    github: {
-      type: 'img',
-      src:  'https://cdn.simpleicons.org/github/FFFFFF',
-      label: 'GitHub'
-    },
-    whatsapp: {
-      type: 'img',
-      src:  'https://cdn.simpleicons.org/whatsapp/FFFFFF',
-      label: 'WhatsApp'
-    },
-    novypro: {
-      type: 'text',
-      text: 'NV',
-      label: 'NovyPro'
-    },
-    contra: {
-      type: 'text',
-      text: 'CO',
-      label: 'Contra'
-    },
-    email: {
-      type: 'svg',
-      svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>`,
-      label: 'Email'
+  /* ── Social icon helper ─────────────────────────────────── */
+  function buildIconInner(icon, size = 20) {
+    if (icon.imgUrl) {
+      return `<img src="${icon.imgUrl}" alt="${safe(icon.label)}" width="${size}" height="${size}" loading="lazy" />`;
     }
-  };
+    if (icon.svgPath) {
+      return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="${icon.svgPath}"/></svg>`;
+    }
+    return `<span class="sidebar-text">${safe(icon.customText || icon.label.slice(0,2).toUpperCase())}</span>`;
+  }
+
+  /* ════════════════════════════════════════════════════════════
+     NEW: SIDEBAR NAV — injects social icons vertically
+  ═════════════════════════════════════════════════════════════*/
+  function renderSidebar() {
+    const container = $('#sidebar-icons');
+    if (!container) return;
+    const icons = D.personal.socialIcons || [];
+    container.innerHTML = icons
+      .filter(ic => ic.visible !== false)
+      .map(ic => `
+        <a href="${ic.url}"
+           class="sidebar-icon-link${ic.showHover ? ' has-hover' : ''}"
+           target="${ic.url.startsWith('mailto') ? '_self' : '_blank'}"
+           rel="noopener noreferrer"
+           aria-label="${safe(ic.label)}"
+           title="${safe(ic.label)}">
+          ${buildIconInner(ic, 18)}
+        </a>`).join('');
+  }
+
+  /* ════════════════════════════════════════════════════════════
+     NEW: APPLY SECTION COLOURS from data.js → sectionColors
+     Sets CSS custom properties inline on each <section> element.
+  ═════════════════════════════════════════════════════════════*/
+  function applySectionColors() {
+    const sc = D.sectionColors;
+    if (!sc) return;
+
+    const MAP = {
+      home:         '#home',
+      about:        '#about',
+      projects:     '#projects',
+      experience:   '#experience',
+      skills:       '#skills',
+      services:     '#services',
+      testimonials: '#testimonials',
+      contact:      '#contact'
+    };
+
+    Object.entries(MAP).forEach(([key, sel]) => {
+      const el = $(sel);
+      if (!el || !sc[key]) return;
+      const c = sc[key];
+      let style = '';
+      if (c.heading) style += `--sc-heading:${c.heading};`;
+      if (c.body)    style += `--sc-body:${c.body};`;
+      if (c.bg)      style += `--sc-bg:${c.bg};`;
+      if (c.accent)  style += `--sc-accent:${c.accent};`;
+      if (c.btnBg)   style += `--sc-btn-bg:${c.btnBg};`;
+      if (c.btnText) style += `--sc-btn-text:${c.btnText};`;
+      if (c.border)  style += `--sc-border:${c.border};`;
+      if (style) el.setAttribute('style', style);
+    });
+  }
+
+  /* ════════════════════════════════════════════════════════════
+     SOCIAL LINKS HELPER — reads from D.personal.socialIcons
+     mode "pill"   → hero row (dark circles, below buttons)
+     mode "footer" → footer (smaller dark circles)
+  ═════════════════════════════════════════════════════════════*/
+  function renderSocialLinks(selector, _social, mode) {
+    const container = $(selector);
+    if (!container) return;
+    const icons = D.personal.socialIcons || [];
+    const visible = icons.filter(ic => ic.visible !== false);
+    const isFooter = mode === 'footer';
+    const sz = isFooter ? 16 : 20;
+
+    container.innerHTML = visible.map(ic => {
+      const cls = isFooter
+        ? `footer-social-link social-brand-link${ic.showHover ? ' has-hover' : ''}`
+        : `social-brand-link${ic.showHover ? ' has-hover' : ''}`;
+      const dim = isFooter ? '34px' : '44px';
+      return `<a href="${ic.url}"
+                 class="${cls}"
+                 target="${ic.url.startsWith('mailto') ? '_self' : '_blank'}"
+                 rel="noopener noreferrer"
+                 aria-label="${safe(ic.label)}"
+                 title="${safe(ic.label)}"
+                 style="width:${dim};height:${dim};">
+                ${buildIconInner(ic, sz)}
+              </a>`;
+    }).join('');
+  }
 
   /* ════════════════════════════════════════════════════════════
      1. THEME TOGGLE
@@ -455,43 +512,6 @@
   }
 
   /* ════════════════════════════════════════════════════════════
-     SOCIAL LINKS HELPER — brand logo circles (Image 2 style)
-     mode "pill"   → hero & contact (44 px dark circles)
-     mode "footer" → footer (34 px dark circles)
-  ═════════════════════════════════════════════════════════════*/
-  function renderSocialLinks(selector, social, mode) {
-    const container = $(selector);
-    if (!container || !social) return;
-
-    const links = Object.entries(social).filter(([, url]) => url);
-    const isFooter = mode === 'footer';
-    const size     = isFooter ? 34 : 44;
-    const imgSize  = isFooter ? 18 : 22;
-
-    container.innerHTML = links.map(([key, url]) => {
-      const meta = SOCIAL_META[key] || { type: 'text', text: key.slice(0,2).toUpperCase(), label: key };
-
-      /* Build inner content based on icon type */
-      let inner = '';
-      if (meta.type === 'img') {
-        inner = `<img src="${meta.src}" alt="${meta.label}" width="${imgSize}" height="${imgSize}" loading="lazy" />`;
-      } else if (meta.type === 'svg') {
-        inner = meta.svg;
-      } else {
-        inner = `<span class="brand-text">${meta.text}</span>`;
-      }
-
-      const cls = isFooter ? 'footer-social-link social-brand-link' : 'social-brand-link';
-      return `<a href="${url}" class="${cls}"
-                 target="_blank" rel="noopener noreferrer"
-                 aria-label="${meta.label}" title="${meta.label}"
-                 style="width:${size}px;height:${size}px;">
-                ${inner}
-              </a>`;
-    }).join('');
-  }
-
-  /* ════════════════════════════════════════════════════════════
      NEW: TOOLS & TECHNOLOGIES GRID
      Reads D.tools[] from data.js — add/remove tools there.
   ═════════════════════════════════════════════════════════════*/
@@ -522,7 +542,7 @@
     const fab = $('#schedule-fab');
     if (fab) fab.href = D.personal.scheduleUrl;
   }
-
+  
   function initContactForm() {
     const form   = $('#contact-form');
     const status = $('#form-status');
@@ -609,6 +629,8 @@
 
     renderTools();
     initScheduleFab();
+    renderSidebar();
+    applySectionColors();
 
     initContactForm();
 
