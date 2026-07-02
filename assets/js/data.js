@@ -8,10 +8,10 @@ const PORTFOLIO_DATA = {
 
   /* ─── PERSONAL INFO ───────────────────────────────────── */
   personal: {
-    name:       "Jelilat Oluwatosin Abdullateef",
+    name:       "Jelilat Abdullateef",
     nameShort:  "Jelilat",
     initials:   "JELILAT",
-    tagline:    "Turning Data Into Decisions & Ideas Into Impact",
+    tagline:    "Helping Businesses Make Better Decisions Through Data, Improve Products, and Turn Ideas Into Real Business Growth",
     email:      "jelilatoluwatosinabdullateef@gmail.com",
     phone:      "+234 905 273 9745",
     whatsapp:   "+234 907 586 0492",
@@ -55,7 +55,7 @@ const PORTFOLIO_DATA = {
       {
         key:        "linkedin",
         url:        "https://www.linkedin.com/in/jelilat/",
-        imgUrl:     "https://cdn.simpleicons.org/linkedin/FFFFFF",
+        imgUrl:     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrF3zyv6McczN653khKPc5QfLUTBPKkVs46Bq8xjwV7OJa4BieTsS38yDs&s=10",
         label:      "LinkedIn",
         iconColor:  "white",
         showHover:  false,
@@ -64,18 +64,18 @@ const PORTFOLIO_DATA = {
       {
         key:        "github",
         url:        "https://github.com/Jelilat25",
-        imgUrl:     "https://cdn.simpleicons.org/github/FFFFFF",
+        imgUrl:     "https://p7.hiclipart.com/preview/31/119/666/github-logo-repository-computer-icons-github.jpg",
         label:      "GitHub",
         iconColor:  "white",
         showHover:  false,
         visible:    true
       },
       {
-        key:        "novypro",
-        url:        "https://www.novypro.com/profile_projects/jelilatdatainsights",
-        imgUrl:     "",            /* ← add your own image URL here */
-        label:      "NovyPro",
-        customText: "NV",         /* shown when imgUrl is empty */
+        key:        "UpWork",
+        url:        "https://www.upwork.com/freelancers/~0150108b364b40a38f",
+        imgUrl:     "https://www.citypng.com/public/uploads/preview/upwork-round-black-logo-icon-735811696609922hnwnyggn9o.png",            /* ← add your own image URL here */
+        label:      "UpWork",
+        customText: "UP",         /* shown when imgUrl is empty */
         iconColor:  "white",
         showHover:  false,
         visible:    true
@@ -83,7 +83,7 @@ const PORTFOLIO_DATA = {
       {
         key:        "contra",
         url:        "https://contra.com/JelilatDataInsights",
-        imgUrl:     "",
+        imgUrl:     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3YlNgnSUF93eigQ9XknDkU0NOPOJAWTTBn29Lm_8sx2PpaiIU-wWnYTc&s=10",
         label:      "Contra",
         customText: "CO",
         iconColor:  "white",
@@ -93,7 +93,7 @@ const PORTFOLIO_DATA = {
       {
         key:        "email",
         url:        "mailto:jelilatoluwatosinabdullateef@gmail.com",
-        imgUrl:     "",
+        imgUrl:     "https://png.pngtree.com/element_our/png/20181213/inbox-vector-icon-png_267453.jpg",
         label:      "Email",
         /* inline SVG envelope — change to imgUrl if you prefer */
         svgPath:    "M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z",
@@ -104,7 +104,7 @@ const PORTFOLIO_DATA = {
       {
         key:        "whatsapp",
         url:        "https://wa.me/2349075860492",
-        imgUrl:     "https://cdn.simpleicons.org/whatsapp/FFFFFF",
+        imgUrl:     "https://img.icons8.com/p1em/1200/whatsapp.jpg",
         label:      "WhatsApp",
         iconColor:  "white",
         showHover:  false,

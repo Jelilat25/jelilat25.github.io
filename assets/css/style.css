@@ -206,7 +206,11 @@ nav, main, section, footer, .vb-float, .schedule-fab {
   transition: color 0.2s, background 0.2s;
   white-space: nowrap;
 }
-.nav-link:hover, .nav-link.active { color: var(--primary); background: var(--glow); }
+.nav-link:hover,
+.nav-link.active {
+    color: var(--heading);
+    background: var(--bg-alt);
+}
 .nav-actions { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
 
 /* Theme button */
@@ -354,7 +358,7 @@ nav, main, section, footer, .vb-float, .schedule-fab {
   color: var(--primary);
   background: var(--glow);
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(109,40,217,0.2);
+  box-shadow: 0 4px 12px rgba(236, 234, 241, 0.2);
 }
 
 /* ─── 9. HERO ─────────────────────────────────────────────────── */
@@ -977,28 +981,30 @@ nav, main, section, footer, .vb-float, .schedule-fab {
 }
 /* Hire Me — gradient filled pill */
 .btn-hero-hire {
-  background: linear-gradient(135deg, #7C3AED 0%, #4C1D95 100%);
-  color: #fff;
-  border: 2px solid transparent;
-  box-shadow: 0 4px 18px rgba(109,40,217,0.45);
+    background: linear-gradient(135deg, #7C3AED 0%, #4C1D95 100%);
+    color: var(--btn-text);
+    border: 2px solid transparent;
+  box-shadow: 0 4px 18px rgba(74, 24, 155, 0.45);
 }
 .btn-hero-hire:hover {
-  background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);
-  color: #fff;
+    background: var(--bg-alt);
+    color: var(--heading);
+    border-color: var(--border);
   transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(109,40,217,0.6);
 }
 /* View Work — outlined pill */
 .btn-hero-view {
   background: transparent;
-  color: var(--primary-l);
-  border: 2px solid var(--primary);
+ color: var(--heading);
+  border: 1px solid var(--primary);
 }
 .btn-hero-view:hover {
-  background: var(--primary);
-  color: #fff;
+  background: var(--bg-alt);
+color: var(--heading);
+border-color: var(--primary);
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(109,40,217,0.4);
+  box-shadow: 0 6px 22px rgba(170, 147, 207, 0.4);
 }
 
 /* ─── BRAND SOCIAL CIRCLES (dark bg + SVG logo) ─────────────── */
@@ -1010,17 +1016,19 @@ nav, main, section, footer, .vb-float, .schedule-fab {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(20, 15, 40, 0.85);
-  border: 1px solid rgba(109,40,217,0.25);
+  background: #1F2937;
+  border: none;
   transition: all 0.25s ease;
   text-decoration: none;
   flex-shrink: 0;
   overflow: hidden;
 }
+  
 [data-theme="light"] .social-brand-link {
-  background: rgba(240, 236, 255, 0.9);
-  border-color: var(--border);
+  background: #F1F5F9;
+  border: none;
 }
+
 .social-brand-link img {
   width: 22px;
   height: 22px;
@@ -1030,8 +1038,9 @@ nav, main, section, footer, .vb-float, .schedule-fab {
   filter: brightness(1);
 }
 [data-theme="light"] .social-brand-link img {
-  filter: brightness(0) saturate(100%) invert(22%) sepia(70%) saturate(1500%) hue-rotate(255deg);
+    filter: none;
 }
+
 .social-brand-link .brand-text {
   font-family: 'Syne', sans-serif;
   font-size: 0.68rem;
@@ -1192,24 +1201,23 @@ nav, main, section, footer, .vb-float, .schedule-fab {
   border-color: rgba(255,255,255,0.12) !important;
 }
 .social-brand-link:hover {
-  background: rgba(20,15,40,0.75) !important;
-  border-color: rgba(255,255,255,0.2)  !important;
-  box-shadow: none !important;
-  transform: none !important;
-  color: inherit !important;
+  transform: translateY(-2px);
+  background: #273449 !important;
+  box-shadow: none;
 }
-.social-brand-link:hover img  { filter: brightness(1) !important; }
+.social-brand-link:hover img {
+  filter: none; }
 .social-brand-link:hover .brand-text { color: #fff !important; }
 
 [data-theme="light"] .social-brand-link {
-  background: rgba(240,236,255,0.8) !important;
-  border-color: var(--border)       !important;
+    background: #ffffff !important;
+    border-color: var(--border) !important;
 }
+
 [data-theme="light"] .social-brand-link:hover {
-  background: rgba(240,236,255,0.8) !important;
-  border-color: var(--border)       !important;
-  transform: none !important;
-  box-shadow: none !important;
+  background: #E2E8F0 !important;
+  transform: translateY(-2px);
+  box-shadow: none;
 }
 /* Subtle lift only if showHover = true (class added by main.js) */
 .social-brand-link.has-hover:hover {
