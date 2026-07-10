@@ -205,10 +205,11 @@
 
     /* Button hrefs */
     const setHref = (id, href) => { const el = $(id); if (el) el.href = href; };
-    setHref('#hero-schedule',    p.scheduleUrl);
-    setHref('#hero-resume',      p.resumeUrl);
-    setHref('#nav-resume-btn',   p.resumeUrl);
-    setHref('#mobile-resume-btn',p.resumeUrl);
+    setHref('#hero-schedule',     p.scheduleUrl);
+    setHref('#hero-resume',       p.resumeUrl);
+    setHref('#nav-resume-btn',    p.resumeUrl);
+    setHref('#nav-resume-btn2',   p.resumeUrl);
+    setHref('#mobile-resume-btn', p.resumeUrl);
 
     /* Social links */
     renderSocialLinks('#hero-social',    p.social, 'pill');
@@ -235,8 +236,25 @@
   }
 
   /* ════════════════════════════════════════════════════════════
-     6. PROJECTS
+     6. PROJECTS — responsive pagination + View More / Show Less
   ═════════════════════════════════════════════════════════════*/
+
+  /* Returns how many items to show initially based on viewport */
+  function getInitialCount(type) {
+    const w = window.innerWidth;
+    if (type === 'projects') {
+      if (w <= 600) return 3;   /* mobile:  1-col grid  → 3 cards  */
+      if (w <= 900) return 4;   /* tablet:  2-col grid  → 4 cards  */
+      return 6;                  /* desktop: 3-col grid  → 6 cards  */
+    }
+    if (type === 'experience') {
+      if (w <= 600) return 3;
+      if (w <= 900) return 3;
+      return 4;
+    }
+    return 6;
+  }
+
   function renderProjects() {
     const projects   = D.projects || [];
     const filtersEl  = $('#project-filters');
@@ -248,11 +266,8 @@
     projects.forEach(p => { if (!cats.includes(p.category)) cats.push(p.category); });
 
     const catLabels = {
-      all:      'All Projects',
-      data:     'Data Analytics',
-      python:   'Python',
-      product:  'Product',
-      business: 'Business',
+      all: 'All Projects', data: 'Data Analytics',
+      python: 'Python', product: 'Product', business: 'Business',
     };
 
     /* Filter tabs */
@@ -265,17 +280,13 @@
     /* Project cards */
     gridEl.innerHTML = projects.map(p => {
       const liveBtn = p.links?.live
-        ? `<a href="${p.links.live}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Project</a>`
-        : '';
+        ? `<a href="${p.links.live}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Project</a>` : '';
       const codeBtn = p.links?.code
-        ? `<a href="${p.links.code}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Code</a>`
-        : '';
-
+        ? `<a href="${p.links.code}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Code</a>` : '';
       return `
       <div class="project-card" data-cat="${p.category}">
         <div class="project-thumb">
-          <img src="${p.image || p.placeholder}"
-               alt="${safe(p.title)}" loading="lazy"
+          <img src="${p.image || p.placeholder}" alt="${safe(p.title)}" loading="lazy"
                onerror="this.src='${p.placeholder}'" />
           <div class="project-overlay">${liveBtn}${codeBtn}</div>
         </div>
@@ -291,7 +302,62 @@
       </div>`;
     }).join('');
 
-    /* Filter logic */
+    /* ── Pagination state ── */
+    let activeCat    = 'all';
+    let isExpanded   = false;
+
+    /* Inject View More button below the grid */
+    let viewMoreWrap = $('#projects-view-more');
+    if (!viewMoreWrap) {
+      viewMoreWrap = document.createElement('div');
+      viewMoreWrap.className = 'view-more-wrap';
+      viewMoreWrap.id = 'projects-view-more';
+      gridEl.parentNode.insertBefore(viewMoreWrap, gridEl.nextSibling);
+    }
+
+    function applyPagination() {
+      const initial  = getInitialCount('projects');
+      const allCards = $$('.project-card', gridEl);
+      /* First pass: apply category filter */
+      allCards.forEach(card => {
+        const catMatch = activeCat === 'all' || card.dataset.cat === activeCat;
+        card.classList.toggle('hidden', !catMatch);
+      });
+      /* Second pass: among visible cards, hide those beyond initial count */
+      const visible = allCards.filter(c => !c.classList.contains('hidden'));
+      const needsBtn = visible.length > initial;
+
+      if (!isExpanded) {
+        visible.forEach((card, i) => {
+          card.classList.toggle('paged-hidden', i >= initial);
+        });
+      } else {
+        visible.forEach(card => card.classList.remove('paged-hidden'));
+      }
+
+      /* Render or hide the button */
+      if (needsBtn) {
+        const label  = isExpanded ? 'Show Less' : `View More Projects (${visible.length - initial} more)`;
+        viewMoreWrap.innerHTML = `
+          <button class="btn-view-more${isExpanded ? ' expanded' : ''}" id="proj-toggle-btn">
+            ${label} <span class="vm-icon">&#9660;</span>
+          </button>`;
+        $('#proj-toggle-btn').addEventListener('click', () => {
+          isExpanded = !isExpanded;
+          applyPagination();
+          if (!isExpanded) {
+            /* Scroll back up to section top */
+            document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      } else {
+        viewMoreWrap.innerHTML = '';
+      }
+    }
+
+    applyPagination();
+
+    /* Filter tab clicks */
     filtersEl.addEventListener('click', e => {
       const btn = e.target.closest('.filter-btn');
       if (!btn) return;
@@ -301,20 +367,25 @@
       });
       btn.classList.add('active');
       btn.setAttribute('aria-selected', 'true');
-      const cat = btn.dataset.cat;
-      $$('.project-card', gridEl).forEach(card => {
-        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
-      });
+      activeCat   = btn.dataset.cat;
+      isExpanded  = false;
+      applyPagination();
     });
+
+    /* Re-apply on resize (column count changes) */
+    window.addEventListener('resize', () => {
+      if (!isExpanded) applyPagination();
+    }, { passive: true });
   }
 
   /* ════════════════════════════════════════════════════════════
-     7. EXPERIENCE — keeps emoji icons (Experience section only)
+     7. EXPERIENCE — paginated View More / Show Less
   ═════════════════════════════════════════════════════════════*/
   function renderExperience() {
     const tl = $('#timeline');
     if (!tl || !D.experience) return;
 
+    /* Render all timeline items */
     tl.innerHTML = D.experience.map(exp => `
       <div class="timeline-item">
         <div class="timeline-dot" aria-hidden="true">${safe(exp.icon || '·')}</div>
@@ -330,6 +401,59 @@
           </ul>
         </div>
       </div>`).join('');
+
+    /* ── Inject View More button below the timeline ── */
+    let expMoreWrap = $('#exp-view-more');
+    if (!expMoreWrap) {
+      expMoreWrap = document.createElement('div');
+      expMoreWrap.className = 'view-more-wrap';
+      expMoreWrap.id = 'exp-view-more';
+      tl.parentNode.insertBefore(expMoreWrap, tl.nextSibling);
+    }
+
+    let isExpanded = false;
+
+    function applyExpPagination() {
+      const initial = getInitialCount('experience');
+      const items   = $$('.timeline-item', tl);
+      const total   = items.length;
+      const needBtn = total > initial;
+
+      if (!isExpanded) {
+        items.forEach((item, i) => {
+          item.classList.toggle('paged-hidden', i >= initial);
+        });
+      } else {
+        items.forEach(item => item.classList.remove('paged-hidden'));
+      }
+
+      if (needBtn) {
+        const hidden = total - initial;
+        const label  = isExpanded
+          ? 'Show Less'
+          : `View More Experience (${hidden} more)`;
+        expMoreWrap.innerHTML = `
+          <button class="btn-view-more${isExpanded ? ' expanded' : ''}" id="exp-toggle-btn">
+            ${label} <span class="vm-icon">&#9660;</span>
+          </button>`;
+        $('#exp-toggle-btn').addEventListener('click', () => {
+          isExpanded = !isExpanded;
+          applyExpPagination();
+          if (!isExpanded) {
+            document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      } else {
+        expMoreWrap.innerHTML = '';
+      }
+    }
+
+    applyExpPagination();
+
+    /* Re-apply on resize (count thresholds change) */
+    window.addEventListener('resize', () => {
+      if (!isExpanded) applyExpPagination();
+    }, { passive: true });
   }
 
   /* ════════════════════════════════════════════════════════════
@@ -515,13 +639,14 @@
     }).join('');
   }
 
-  /* ════════════════════════════════════════════════════════════
+  /* 
      NEW: WIRE SCHEDULE FAB href from data.js
-  ═════════════════════════════════════════════════════════════*/
+  */
   function initScheduleFab() {
     const fab = $('#schedule-fab');
     if (fab) fab.href = D.personal.scheduleUrl;
   }
+
   function initContactForm() {
     const form   = $('#contact-form');
     const status = $('#form-status');
