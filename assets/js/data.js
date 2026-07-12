@@ -121,8 +121,8 @@ const PORTFOLIO_DATA = {
     stats: [
       { value: 5,  suffix: "+", label: "Years Experience"   },
       { value: 14, suffix: "+", label: "Projects Delivered" },
-      { value: 8,  suffix: "+", label: "Roles Mastered"     },
-      { value: 5,  suffix: "+", label: "Industries Served"  }
+      { value: 9,  suffix: "+", label: "Roles Mastered"     },
+      { value: 6,  suffix: "+", label: "Industries Served"  }
     ]
   },
 
@@ -147,6 +147,7 @@ const PORTFOLIO_DATA = {
       title:       "AI Customer Support & Loan Qualification System",
       description: "Designed and implemented an AI-powered customer support workflow for a commercial lending platform. Integrated CRM lead capture, AI knowledge retrieval, intelligent conversation flows, and automated customer routing to improve support efficiency and lead qualificatioon.",
       placeholder: "https://placehold.co/600x380/A78BFA/FFFFFF?text=SalesIQ",
+      image:       "assets/images/projects/salesiq.jpg",
       tags:        ["Zoho SalesIQ", "Zoho CRM", "AI", "Knowledge Base"],
       category:    "Sales",
       impact:      "Improved customer self-service · Automated CRM lead capture · Integrated AI Knowledge Base",
@@ -327,12 +328,26 @@ const PORTFOLIO_DATA = {
 
   /* ─── EXPERIENCE ────────────────────────────────────────── */
   experience: [
-    {
+      {
       id:        1,
+      company:   "UpWork",
+      role:      "Freelance",
+      duration:  "2024 – Present",
+      type:      "Full-time",
+      icon:      "🏢",
+      highlights: [
+        "Delivered data analytics and business intelligence solutions for clients across multiple industries.",
+        "Built interactive dashboards and reports using Power BI, SQL, Excel, Python, and Tableau.",
+        "Cleaned, analyzed, and visualized data to uncover actionable business insights.",
+        "Collaborated directly with clients to deliver high-quality solutions within agreed timelines."
+      ]
+    },
+    {
+      id:        2,
       company:   "CR Equity AI",
       role:      "Product Analyst",
-      duration:  "AUG 2025 – Present",
-      type:      "Full-time",
+      duration:  "July 2025 – July 2026",
+      type:      "Part-time",
       icon:      "🏢",
       highlights: [
         "Updated and organized Jira tickets, using structured documentation to keep product tasks clear and easy to follow.",
@@ -341,11 +356,11 @@ const PORTFOLIO_DATA = {
       ]
     },
     {
-      id:        2,
+      id:        3,
       company:   "Perpetuum Designs",
       role:      "Account Manager",
-      duration:  "2024 – Present",
-      type:      "Full-time",
+      duration:  "June 2025 – Sep 2025",
+      type:      "Part-time",
       icon:      "🏢",
       highlights: [
         "Engaged prospective clients through cold calling and personalized emails, booking discovery calls and driving new business.",
@@ -355,10 +370,10 @@ const PORTFOLIO_DATA = {
       ]
     },
     {
-      id:        3,
+      id:        4,
       company:   "Venture for Africa",
       role:      "Business Analyst",
-      duration:  "2023 – 2024",
+      duration:  "Feb 2025 – May 2025",
       type:      "Contract",
       icon:      "🌍",
       highlights: [
@@ -369,11 +384,11 @@ const PORTFOLIO_DATA = {
       ]
     },
     {
-      id:        4,
+      id:        5,
       company:   "Excelerate",
       role:      "Data Visualization Analyst",
-      duration:  "2023",
-      type:      "Contract",
+      duration:  "Dec 2025 - Apr 2025",
+      type:      "Internship",
       icon:      "📈",
       highlights: [
         "Designed and delivered interactive data visualizations to help teams make faster, more informed decisions.",
@@ -382,24 +397,10 @@ const PORTFOLIO_DATA = {
       ]
     },
     {
-      id:        5,
-      company:   "Taste DNA",
-      role:      "Freelance Data Analyst",
-      duration:  "2022 – 2023",
-      type:      "Freelance",
-      icon:      "🍽️",
-      highlights: [
-        "Led a data team assessing Facebook ad campaign performance, identifying four low-performing ads to discontinue.",
-        "Analyzed Reach, CTR, and CPR metrics to deliver cost-saving insights for GlobalShala's Superhero U event.",
-        "Transformed unstructured restaurant menu data into an organized format, enabling a mobile app launch.",
-        "Streamlined data cleaning processes in Excel, reducing data entry errors by 20% and boosting app usability."
-      ]
-    },
-    {
       id:        6,
       company:   "Kugler Services LLC",
       role:      "Freelance Data Analyst",
-      duration:  "2022",
+      duration:  "Feb 2024 - Sep 2024",
       type:      "Freelance",
       icon:      "📈",
       highlights: [
@@ -409,24 +410,11 @@ const PORTFOLIO_DATA = {
         "Delivered actionable insights through deep analysis of expenditure trends and transaction data patterns."
       ]
     },
-    {
+ {
       id:        7,
-      company:   "Intern Career",
-      role:      "Data Analyst Intern",
-      duration:  "2022",
-      type:      "Internship",
-      icon:      "🎓",
-      highlights: [
-        "Conducted global terrorism analysis (1979–2017) using Excel and Power BI, creating an interactive insight dashboard.",
-        "Analyzed top 1,000 YouTube streamers using Python (Pandas, Seaborn, Matplotlib), optimizing engagement strategies by 15%.",
-        "Delivered comprehensive reports on both projects, enhancing data interpretation and enabling strategic planning."
-      ]
-    },
-    {
-      id:        8,
       company:   "MeriSKILL",
       role:      "Data Analyst Intern",
-      duration:  "2021 – 2022",
+      duration:  "Jan 2024 – Aug 2024",
       type:      "Internship",
       icon:      "🎓",
       highlights: [
@@ -436,10 +424,23 @@ const PORTFOLIO_DATA = {
       ]
     },
     {
+      id:        8,
+      company:   "Intern Career",
+      role:      "Data Analyst Intern",
+      duration:  "Dec 2023 - Apr 2024",
+      type:      "Internship",
+      icon:      "🎓",
+      highlights: [
+        "Conducted global terrorism analysis (1979–2017) using Excel and Power BI, creating an interactive insight dashboard.",
+        "Analyzed top 1,000 YouTube streamers using Python (Pandas, Seaborn, Matplotlib), optimizing engagement strategies by 15%.",
+        "Delivered comprehensive reports on both projects, enhancing data interpretation and enabling strategic planning."
+      ]
+    },
+    {
       id:        9,
       company:   "Crownford Model School",
       role:      "Mathematics Teacher",
-      duration:  "2019 – 2021",
+      duration:  "Feb 2020 – Nov 2022",
       type:      "Full-time",
       icon:      "📚",
       highlights: [
