@@ -267,7 +267,7 @@
 
     const catLabels = {
       all: 'All Projects', data: 'Data Analytics',
-      python: 'Python', product: 'Product', business: 'Business',
+      Sales: 'Sales', product: 'Product', business: 'Business',
     };
 
     /* Filter tabs */

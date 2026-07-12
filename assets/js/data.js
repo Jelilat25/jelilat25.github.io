@@ -8,7 +8,7 @@ const PORTFOLIO_DATA = {
 
   /* ─── PERSONAL INFO ───────────────────────────────────── */
   personal: {
-    name:       "Jelilat Abdullateef",
+    name:       "Jelilat Oluwatosin Abdullateef",
     nameShort:  "Jelilat",
     initials:   "JELILAT",
     tagline:    "Helping Businesses Make Better Decisions Through Data, Improve Products, and Turn Ideas Into Real Business Growth",
@@ -119,8 +119,8 @@ const PORTFOLIO_DATA = {
     bio2: `From building Power BI dashboards that transform financial tracking, to managing client pipelines in HubSpot and shipping better products through QA — I bring clarity, reliability, and measurable impact to every engagement. Trusted by clients across retail, F&B, architecture, and talent markets.`,
 
     stats: [
-      { value: 4,  suffix: "+", label: "Years Experience"   },
-      { value: 12, suffix: "+", label: "Projects Delivered" },
+      { value: 5,  suffix: "+", label: "Years Experience"   },
+      { value: 14, suffix: "+", label: "Projects Delivered" },
       { value: 8,  suffix: "+", label: "Roles Mastered"     },
       { value: 5,  suffix: "+", label: "Industries Served"  }
     ]
@@ -142,8 +142,21 @@ const PORTFOLIO_DATA = {
         code: ""
       }
     },
-    {
+     {
       id:          2,
+      title:       "AI Customer Support & Loan Qualification System",
+      description: "Designed and implemented an AI-powered customer support workflow for a commercial lending platform. Integrated CRM lead capture, AI knowledge retrieval, intelligent conversation flows, and automated customer routing to improve support efficiency and lead qualificatioon.",
+      placeholder: "https://placehold.co/600x380/A78BFA/FFFFFF?text=SalesIQ",
+      tags:        ["Zoho SalesIQ", "Zoho CRM", "AI", "Knowledge Base"],
+      category:    "Sales",
+      impact:      "Improved customer self-service · Automated CRM lead capture · Integrated AI Knowledge Base",
+      links: {
+          live: "https://0d965a53-b68f-4d04-87d7-f1842e32c1c3.filesusr.com/RoadAccidentProject.pdf",
+          code: ""
+      }
+    },
+    {
+      id:          3,
       title:       "Pizza Sales Report Dashboard",
       description: "Analyzed pizza company sales data to uncover trends, best-selling categories, revenue patterns, and profit margins. Built end-to-end with Excel, SQL, and Power BI.",
       image:       "assets/images/projects/pizza-sales.jpg",
@@ -157,13 +170,13 @@ const PORTFOLIO_DATA = {
       }
     },
     {
-      id:          3,
+      id:          4,
       title:       "Employee Wellness & Retention Analysis",
       description: "Explored how wellness program usage relates to performance ratings and retention. Applied correlation analysis, regression, and survival analysis across 42 columns of HR data.",
       image:       "assets/images/projects/employee-wellness.jpg",
       placeholder: "https://placehold.co/600x380/7C3AED/FFFFFF?text=Employee+Wellness",
       tags:        ["Python", "Pandas", "Seaborn", "Statsmodels"],
-      category:    "python",
+      category:    "data",
       impact:      "Identified gender-specific gaps · Shaped HR retention strategy",
       links: {
         live: "",
@@ -171,7 +184,7 @@ const PORTFOLIO_DATA = {
       }
     },
     {
-      id:          4,
+      id:          5,
       title:       "Global Terrorism Analysis (1979–2017)",
       description: "Cleaned, processed, and visualized global terrorism data spanning four decades. Built an interactive Power BI dashboard highlighting key patterns across regions and incident types.",
       image:       "assets/images/projects/terrorism.jpg",
@@ -185,13 +198,13 @@ const PORTFOLIO_DATA = {
       }
     },
     {
-      id:          5,
+      id:          6,
       title:       "Online Retail Performance Dashboard",
       description: "Multi-year (2019–2023) KPI dashboard tracking sales, profit, customer satisfaction, and category performance. Enabled seasonality analysis and quick year-over-year comparison.",
       image:       "assets/images/projects/online-retail.jpg",
       placeholder: "https://placehold.co/600x380/8B5CF6/F5F5F5?text=Online+Retail",
       tags:        ["Power BI", "DAX", "Excel", "Business Intelligence"],
-      category:    "data",
+      category:    "business",
       impact:      "Optimized inventory planning · Revealed seasonal patterns",
       links: {
         live: "https://app.powerbi.com/view?r=eyJrIjoiYjQzZWQ4NzUtN2EzNC00ODJhLThhYzItNjAwNDRiNWFmMmE1IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
@@ -199,7 +212,7 @@ const PORTFOLIO_DATA = {
       }
     },
     {
-      id:          6,
+      id:          7,
       title:       "HR Employee Attrition Dashboard",
       description: "Power BI dashboard surfacing workforce trends, attrition factors, business travel impact, performance ratings, and employee well-being indicators for HR teams.",
       image:       "assets/images/projects/hr-attrition.jpg",
@@ -213,7 +226,7 @@ const PORTFOLIO_DATA = {
       }
     },
     {
-      id:          7,
+      id:          8,
       title:       "Road Accident Analytics (2021–2022)",
       description: "Analyzed 417,883 road casualties to surface patterns in timing, road types, vehicle categories, and urban vs rural distribution. Findings inform road safety policy.",
       image:       "assets/images/projects/road-accidents.jpg",
@@ -227,7 +240,7 @@ const PORTFOLIO_DATA = {
       }
     },
     {
-      id:          8,
+      id:          9,
       title:       "Bike Sales Analysis",
       description: "Comprehensive study of bicycle sales trends, customer behavior, and regional preferences using Excel, SQL Server, and Power BI. Delivered detailed reports and interactive dashboards.",
       image:       "assets/images/projects/bike-sales.jpg",
@@ -241,13 +254,13 @@ const PORTFOLIO_DATA = {
       }
     },
     {
-      id:          9,
+      id:          10,
       title:       "Diabetes Prediction Analysis",
       description: "Analyzed National Institute of Diabetes medical data to predict diabetes in Pima Indian females. Applied classification models and predictive analytics using Python.",
       image:       "assets/images/projects/diabetes.jpg",
       placeholder: "https://placehold.co/600x380/8B5CF6/FFFFFF?text=Diabetes+Prediction",
       tags:        ["Python", "Machine Learning", "Healthcare Analytics"],
-      category:    "python",
+      category:    "data",
       impact:      "Pattern identification supporting early diabetes detection",
       links: {
         live: "",
@@ -255,13 +268,13 @@ const PORTFOLIO_DATA = {
       }
     },
     {
-      id:          10,
+      id:          11,
       title:       "Sales Report Dashboard",
       description: "Power BI project delivering detailed analysis of sales metrics including product seating, quantities, revenue, product margins, total orders, and best sellers.",
       image:       "assets/images/projects/sales-report.jpg",
       placeholder: "https://placehold.co/600x380/A78BFA/1A0A2E?text=Sales+Report",
       tags:        ["Power BI", "DAX", "Sales Analytics"],
-      category:    "data",
+      category:    "Sales",
       impact:      "Clear visibility for stakeholder decision-making",
       links: {
         live: "https://app.powerbi.com/view?r=eyJrIjoiMWM3Y2UzZDktNTZiNC00N2I0LWE2ZWQtMzIwYjVmYjg3NzI1IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
@@ -269,7 +282,7 @@ const PORTFOLIO_DATA = {
       }
     },
     {
-      id:          11,
+      id:          12,
       title:       "Tata Group Online Retail Analysis",
       description: "Forage job simulation for Tata Group: cleaned retail data, visualized revenue trends and customer demographics in Power BI, and delivered C-suite ready presentations.",
       image:       "assets/images/projects/tata-group.jpg",
@@ -283,13 +296,13 @@ const PORTFOLIO_DATA = {
       }
     },
     {
-      id:          12,
+      id:          13,
       title:       "YouTube Streamers Analysis",
       description: "Analyzed the top 1,000 YouTube streamers to uncover audience trends, performance metrics, content categories, and brand collaboration patterns using Python.",
       image:       "assets/images/projects/youtube.jpg",
       placeholder: "https://placehold.co/600x380/7C3AED/FFFFFF?text=YouTube+Streamers",
       tags:        ["Python", "Pandas", "Seaborn", "Matplotlib"],
-      category:    "python",
+      category:    "data",
       impact:      "15% improvement in audience engagement recommendations",
       links: {
         live: "",
@@ -297,7 +310,7 @@ const PORTFOLIO_DATA = {
       }
     },
     {
-      id:          13,
+      id:          14,
       title:       "This Portfolio Website",
       description: "A premium, fully animated personal portfolio built from scratch with pure HTML, CSS, and JavaScript. Features aurora canvas background, click orbs, voice bot, dark/light theme, and editable data files.",
       image:       "assets/images/projects/portfolio.jpg",
