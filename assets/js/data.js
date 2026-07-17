@@ -1,8 +1,8 @@
-/* ============================================================
+/* 
    PORTFOLIO DATA — Edit this file to update your website.
    All sections are driven by this file. No need to touch
    HTML or other JS files for content changes.
-   ============================================================ */
+   */
 
 const PORTFOLIO_DATA = {
 
@@ -15,7 +15,7 @@ const PORTFOLIO_DATA = {
     email:      "jelilatoluwatosinabdullateef@gmail.com",
     phone:      "+234 905 273 9745",
     whatsapp:   "+234 907 586 0492",
-    location:   "Lagos, Nigeria",
+    location:   "Nigeria",
     profilePhoto: "assets/images/profile.jpg",
     resumeUrl:    "assets/resume/Jelilat_Resume.pdf",
     scheduleUrl:  "https://cal.com/en/jelilatdatainsights",
@@ -115,8 +115,8 @@ const PORTFOLIO_DATA = {
 
   /* ─── ABOUT ─────────────────────────────────────────────── */
   about: {
-    bio:  `I'm a business and technology generalist who bridges the gap between data, product, and people. With 4+ years spanning data analytics, product management, QA, sales, and lead generation — I don't just analyze problems, I solve them end-to-end.`,
-    bio2: `From building Power BI dashboards that transform financial tracking, to managing client pipelines in HubSpot and shipping better products through QA — I bring clarity, reliability, and measurable impact to every engagement. Trusted by clients across retail, F&B, architecture, and talent markets.`,
+    bio:  ` I'm a business and technology generalist who bridges the gap between data, products, and people. With over five years of experience across data analytics, product management, QA, sales, and lead generation, I don't just identify problems, I help solve them from start to finish.`,
+    bio2: `I enjoy working across different areas of a business, from data and products to sales and client management. My goal is simple: help teams work more efficiently, make better decisions, and create meaningful results. I've worked with organizations across retail, real estate, architecture, technology, and talent markets`,
 
     stats: [
       { value: 5,  suffix: "+", label: "Years Experience"   },
@@ -601,9 +601,9 @@ const PORTFOLIO_DATA = {
       color:  "#0A66C2"
     },
     {
-      name:   "Pandas",
-      imgUrl: "https://cdn.simpleicons.org/pandas/150458",
-      color:  "#150458"
+      name:   "Jira",
+      imgUrl: "https://cdn.simpleicons.org/jira/0052CC",
+      color:  "#0052CC"
     },
     {
       name:   "Jupyter",
@@ -669,12 +669,12 @@ const PORTFOLIO_DATA = {
       skills:     "Jelilat is skilled in Power BI, Python, SQL, Excel, and Tableau for data — plus Apollo, HubSpot, and cold calling on the sales side. She also does QA testing and product analytics.",
       python:     "Yes! Jelilat uses Python for data analysis and machine learning. She's worked with Pandas, Seaborn, Matplotlib, SciPy, and statsmodels on real client projects.",
       powerbi:    "Power BI is one of Jelilat's strongest tools. She's built dashboards for financial tracking, HR analytics, sales reporting, and more — all interactive and auto-refreshing.",
-      projects:   "Jelilat has delivered 12+ projects including cash management dashboards, HR analytics, road accident analysis, diabetes prediction, and YouTube streamers analysis.",
-      experience: "Jelilat has 4+ years of experience across data analytics, product management, QA testing, sales, and lead generation — spanning 9 roles across 5+ industries.",
+      projects:   "Jelilat has delivered 14+ projects including cash management dashboards, HR analytics, road accident analysis, diabetes prediction, and YouTube streamers analysis.",
+      experience: "Jelilat has five years of experience across data analytics, product management, QA testing, sales, and lead generation — spanning 9 roles across 5+ industries.",
       hire:       "You can hire Jelilat via the Contact form on this page, send an email to jelilatoluwatosinabdullateef@gmail.com, or schedule a 1-on-1 call at cal.com/en/jelilatdatainsights",
       contact:    "You can reach Jelilat by email at jelilatoluwatosinabdullateef@gmail.com, WhatsApp at +2349075860492, or LinkedIn at linkedin.com/in/jelilat/",
       services:   "Jelilat offers: Data Analytics & Dashboards, Product Analytics, Lead Generation, Sales & Account Management, QA Testing, and Business Analysis & Reporting.",
-      location:   "Jelilat is based in Lagos, Nigeria, and works with clients remotely from anywhere in the world.",
+      location:   "Jelilat is based in Nigeria, and works with clients remotely from anywhere in the world.",
       resume:     "You can download Jelilat's resume using the Resume button in the navigation bar or the footer of this page.",
       default:    "I can answer questions about Jelilat's skills, projects, experience, services, or how to hire her. What would you like to know?"
     }

@@ -1,5 +1,5 @@
 /* ============================================================
-   voicebot.js — Floating AI Assistant "Jeli"  (Revision 2)
+   voicebot.js — Floating AI Assistant "Tosin"  (Revision 2)
    
    Now a fixed bottom-right FAB widget (not in the footer).
    HTML structure (in index.html):
@@ -131,7 +131,7 @@
     const q = input.toLowerCase().trim();
 
     if (/^(hi|hello|hey|howdy|good\s*(morning|afternoon|evening))/.test(q)) {
-      return `Hello! I'm Jeli, Jelilat's assistant. Ask me about her skills, projects, services, or how to hire her.`;
+      return `Hello! I'm Tosin, Jelilat's assistant. Ask me about her skills, projects, services, or how to hire her.`;
     }
     if (/thank|thanks|great|awesome|perfect/.test(q)) {
       return `You're welcome! Is there anything else you'd like to know about Jelilat?`;

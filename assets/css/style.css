@@ -488,7 +488,8 @@ nav, main, section, footer, .vb-float, .schedule-fab {
   .nav-actions        { margin-left: auto; }
   .hamburger          { display: flex; }
   #nav-resume-btn     { display: none; }
-  #nav-resume-btn2    { display: none; }
+  /* Resume button stays visible on mobile in the navbar */
+  #nav-resume-btn2    { display: inline-flex; font-size: 0.75rem; padding: 0.38rem 0.85rem; }
 }
 
 /* ─── 22. RESPONSIVE — Mobile (≤600px) ─────────────────────── */
