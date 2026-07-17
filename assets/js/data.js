@@ -11,7 +11,7 @@ const PORTFOLIO_DATA = {
     name:       "Jelilat Oluwatosin Abdullateef",
     nameShort:  "Jelilat",
     initials:   "JELILAT",
-    tagline:    "Helping Businesses Make Better Decisions Through Data, Improve Products, and Turn Ideas Into Real Business Growth",
+    tagline:    "Helping businesses make better decisions through data, improve products, and turn ideas into real business growth",
     email:      "jelilatoluwatosinabdullateef@gmail.com",
     phone:      "+234 905 273 9745",
     whatsapp:   "+234 907 586 0492",
