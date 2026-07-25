@@ -80,16 +80,16 @@
   }
   function pickLight() {
     const r = Math.random();
-    if (r < 0.70) return { hex: '#00E5FF', accent: false };
-    if (r < 0.88) return { hex: '#6D28D9', accent: true  };
-    return              { hex: '#E040FB', accent: false };
+    if (r < 0.60) return { hex: '#10a3b3', accent: false };
+    if (r < 0.88) return { hex: '#6132ac', accent: true  };
+    return              { hex: '#89279a', accent: false };
   }
 
-  /* ══════════════════════════════════════════════════════════
+  /*
      PARTICLE
      baseVx/baseVy = natural drift; vx/vy decay back to base
      after any influence, creating the "spring-back" effect.
-  ═══════════════════════════════════════════════════════════*/
+*/
   class Particle {
     constructor() { this.init(); }
 
@@ -147,10 +147,10 @@
     }
   }
 
-  /* ══════════════════════════════════════════════════════════
+  /*
      INFLUENCE HELPERS
      All interactions push existing particles; none create new ones.
-  ═══════════════════════════════════════════════════════════*/
+*/
 
   /* Gentle outward push — used for mouse move & touch move */
   function nudge(px, py, radius, strength) {
@@ -183,9 +183,9 @@
     }
   }
 
-  /* ══════════════════════════════════════════════════════════
+  /*
      DRAW CONNECTIONS
-  ═══════════════════════════════════════════════════════════*/
+ */
   function drawLines(dark) {
     const d2Max   = CFG.dist * CFG.dist;
     const lineRGB = dark ? '255,255,255' : '109,40,217';
@@ -318,9 +318,9 @@
     return false;
   }
 
-  /* ══════════════════════════════════════════════════════════
+  /* 
      EVENTS
-  ═══════════════════════════════════════════════════════════*/
+*/
 
   /* Mouse movement → nudge nearby particles */
   document.addEventListener('mousemove', e => {
@@ -399,9 +399,9 @@
     Array.from(e.changedTouches).forEach(t => activeTouches.delete(t.identifier));
   }, { passive: true });
 
-  /* ══════════════════════════════════════════════════════════
+  /* 
      INIT & RESIZE
-  ═══════════════════════════════════════════════════════════*/
+  */
   function init() {
     CFG      = getConfig();
     frameDur = 1000 / CFG.fps;

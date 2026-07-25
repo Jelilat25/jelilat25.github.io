@@ -209,7 +209,7 @@ nav, main, section, footer, .vb-float, .schedule-fab {
 .hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem; }
 .hero-content { display: flex; flex-direction: column; gap: 0.9rem; }
 .hero-eyebrow { font-size: 0.95rem; color: var(--primary); font-weight: 500; letter-spacing: 0.03em; }
-.hero-name { font-size: clamp(1.8rem, 4.5vw, 3.8rem); font-weight: 800; line-height: 1.08; letter-spacing: -0.025em; color: var(--heading); }
+.hero-name { font-size: clamp(1rem, 3.0vw, 2.3rem); font-weight: 600; line-height: 1; letter-spacing: -0.025em; color: var(--heading); }
 .name-accent { color: var(--primary); }
 .hero-role-row { display: flex; align-items: center; flex-wrap: wrap; font-size: clamp(1rem, 1.8vw, 1.45rem); color: var(--body); font-weight: 400; min-height: 2em; }
 .role-typed { color: var(--primary); font-weight: 600; font-family: 'Poppins', sans-serif; }
@@ -496,8 +496,8 @@ nav, main, section, footer, .vb-float, .schedule-fab {
 @media (max-width: 600px) {
   .section { padding: 3.5rem 0; }
   .hero-section { padding: 4.5rem 0 2rem; min-height: 100svh; }
-  .hero-name { font-size: clamp(1.6rem, 7vw, 2rem); }
-  .hero-role-row { font-size: 0.95rem; justify-content: center; }
+  .hero-name { font-size: clamp(1rem, 6vw, 1.8rem); }
+  .hero-role-row { font-size: 0.9rem; justify-content: center; }
   .hero-tagline { font-size: 0.92rem; }
   .hero-btns { flex-direction: column; align-items: stretch; }
   .hero-btns .btn { text-align: center; justify-content: center; }
@@ -519,7 +519,7 @@ nav, main, section, footer, .vb-float, .schedule-fab {
   .vb-panel { width: calc(100vw - 32px); max-width: 320px; }
   .mobile-menu-btns { flex-direction: column; }
   .contact-grid { gap: 1.5rem; }
-  .schedule-fab { font-size: 0.72rem; padding: 0.55rem 1rem; }
+  .schedule-fab { font-size: 0.7rem; padding: 0.53rem 1rem; }
 }
 
 /* ─── 23. REDUCED MOTION ────────────────────────────────────── */
@@ -566,11 +566,11 @@ nav, main, section, footer, .vb-float, .schedule-fab {
 .social-brand-link {
   display: inline-flex; align-items: center; justify-content: center;
   width: 44px; height: 44px; border-radius: 50%;
-  background: #1F2937; border: none;
+  background: transparent; border: none;
   transition: all 0.25s ease; text-decoration: none;
   flex-shrink: 0; overflow: hidden;
 }
-[data-theme="light"] .social-brand-link { background: #F1F5F9; border: none; }
+[data-theme="light"] .social-brand-link { background: transparent; border: none; }
 .social-brand-link img { width: 22px; height: 22px; display: block; object-fit: contain; filter: brightness(1); }
 [data-theme="light"] .social-brand-link img { filter: none; }
 .social-brand-link .brand-text { font-family: 'Poppins', sans-serif; font-size: 0.68rem; font-weight: 800; color: #fff; letter-spacing: 0.06em; }

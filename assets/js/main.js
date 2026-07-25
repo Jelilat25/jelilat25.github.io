@@ -182,13 +182,7 @@
   function renderHero() {
     const p = D.personal;
 
-    /* Name — last word gets accent colour */
-    const nameEl = $('#hero-name');
-    if (nameEl) {
-      const parts = p.name.trim().split(' ');
-      const last  = parts.pop();
-      nameEl.innerHTML = `${safe(parts.join(' '))} <span class="name-accent">${safe(last)}</span>`;
-    }
+ 
 
     $('#nav-initials')    && ($('#nav-initials').textContent    = p.initials || 'JOA');
     $('#footer-initials') && ($('#footer-initials').textContent = p.initials || 'JOA');
@@ -202,7 +196,13 @@
         photo.src = `https://placehold.co/440x440/6D28D9/FFFFFF?text=${encodeURIComponent(p.initials || 'JOA')}`;
       };
     }
-
+   /* Name — last word gets accent colour */
+    const nameEl = $('#hero-name');
+    if (nameEl) {
+      const parts = p.name.trim().split(' ');
+      const last  = parts.pop();
+      nameEl.innerHTML = `${safe(parts.join(' '))} <span class="name-accent">${safe(last)}</span>`;
+    }
     /* Button hrefs */
     const setHref = (id, href) => { const el = $(id); if (el) el.href = href; };
     setHref('#hero-schedule',     p.scheduleUrl);
