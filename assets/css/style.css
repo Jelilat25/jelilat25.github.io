@@ -1,6 +1,6 @@
-/* ============================================================
+/* 
    JELILAT PORTFOLIO — style.css
-   ============================================================ */
+   */
 
 /* ─── 1. CSS VARIABLES ─────────────────────────────────────── */
 :root {
@@ -209,11 +209,11 @@ nav, main, section, footer, .vb-float, .schedule-fab {
 .hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem; }
 .hero-content { display: flex; flex-direction: column; gap: 0.9rem; }
 .hero-eyebrow { font-size: 0.95rem; color: var(--primary); font-weight: 500; letter-spacing: 0.03em; }
-.hero-name { font-size: clamp(1rem, 3.0vw, 2.3rem); font-weight: 600; line-height: 1; letter-spacing: -0.025em; color: var(--heading); }
+.hero-name { font-size: clamp(1.4rem, 3.2vw, 2.3rem); font-weight: 600; line-height: 1.1; letter-spacing: -0.025em; color: var(--heading); }
 .name-accent { color: var(--primary); }
-.hero-role-row { display: flex; align-items: center; flex-wrap: wrap; font-size: clamp(1rem, 1.8vw, 1.45rem); color: var(--body); font-weight: 400; min-height: 2em; }
-.role-typed { color: var(--primary); font-weight: 600; font-family: 'Poppins', sans-serif; }
-.type-cursor { color: var(--primary); animation: blink 0.85s step-end infinite; margin-left: 1px; }
+.hero-role-row { display: flex; align-items: center; flex-wrap: wrap; font-size: clamp(1rem, 1.6vw, 1.35rem); color: var(--body); font-weight: 400; min-height: 2em; }
+.role-typed { color: #7C3AED; font-weight: 700; font-family: 'Poppins', sans-serif; }
+.type-cursor { color: #7C3AED; animation: blink 0.85s step-end infinite; margin-left: 1px; }
 @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
 .hero-tagline { color: var(--body); font-size: 1rem; max-width: 46ch; line-height: 1.72; }
 .hero-btns { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 0.15rem; }
@@ -496,8 +496,8 @@ nav, main, section, footer, .vb-float, .schedule-fab {
 @media (max-width: 600px) {
   .section { padding: 3.5rem 0; }
   .hero-section { padding: 4.5rem 0 2rem; min-height: 100svh; }
-  .hero-name { font-size: clamp(1rem, 6vw, 1.8rem); }
-  .hero-role-row { font-size: 0.9rem; justify-content: center; }
+  .hero-name { font-size: clamp(1.0rem, 5.2vw, 1.2rem); }
+  .hero-role-row { font-size: 0.95rem; justify-content: center; }
   .hero-tagline { font-size: 0.92rem; }
   .hero-btns { flex-direction: column; align-items: stretch; }
   .hero-btns .btn { text-align: center; justify-content: center; }
@@ -519,7 +519,7 @@ nav, main, section, footer, .vb-float, .schedule-fab {
   .vb-panel { width: calc(100vw - 32px); max-width: 320px; }
   .mobile-menu-btns { flex-direction: column; }
   .contact-grid { gap: 1.5rem; }
-  .schedule-fab { font-size: 0.7rem; padding: 0.53rem 1rem; }
+  .schedule-fab { font-size: 0.72rem; padding: 0.55rem 1rem; }
 }
 
 /* ─── 23. REDUCED MOTION ────────────────────────────────────── */
@@ -570,16 +570,31 @@ nav, main, section, footer, .vb-float, .schedule-fab {
   transition: all 0.25s ease; text-decoration: none;
   flex-shrink: 0; overflow: hidden;
 }
-[data-theme="light"] .social-brand-link { background: transparent; border: none; }
-.social-brand-link img { width: 22px; height: 22px; display: block; object-fit: contain; filter: brightness(1); }
-[data-theme="light"] .social-brand-link img { filter: none; }
+[data-theme="light"] .social-brand-link { background:transparent; border:none; }
+ 
+/* Icon images — transparent background, no white squares */
+.social-brand-link img {
+  width: 20px; height: 20px;
+  display: block;
+  object-fit: contain;
+  background: transparent;
+  /* mix-blend-mode: screen removes embedded white backgrounds
+     on dark containers: white src × dark bg = dark (disappears)
+     coloured icon × dark bg = stays bright                      */
+  mix-blend-mode: screen;
+}
+/* Switch off screen blend in light mode — not needed there */
+[data-theme="light"] .social-brand-link img {
+  mix-blend-mode: normal;
+  filter: brightness(0) saturate(100%) invert(22%) sepia(70%)
+         hue-rotate(252deg) ;
+}
 .social-brand-link .brand-text { font-family: 'Poppins', sans-serif; font-size: 0.68rem; font-weight: 800; color: #fff; letter-spacing: 0.06em; }
 [data-theme="light"] .social-brand-link .brand-text { color: var(--primary); }
-.social-brand-link:hover { transform: translateY(-2px); background: #273449; }
+.social-brand-link:hover { transform: translateY(-2px); background: transparent; }
 .social-brand-link:hover img { filter: none; }
-.social-brand-link:hover .brand-text { color: #fff; }
-[data-theme="light"] .social-brand-link:hover { background: #E2E8F0; transform: translateY(-2px); }
-
+.social-brand-link:hover .brand-text { color: transparent; }
+[data-theme="light"] .social-brand-link:hover { background:#d8d5d5; transform: translateY(-2px); }
 /* ─── 27. TOOLS & TECHNOLOGIES ──────────────────────────────── */
 .tools-subsection { margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border); }
 .tools-sub-header { text-align: center; margin-bottom: 2.5rem; }
@@ -588,7 +603,8 @@ nav, main, section, footer, .vb-float, .schedule-fab {
 .tool-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 0.75rem 1.25rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem; text-align: center; cursor: default; transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.25s; }
 .tool-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--primary); }
 .tool-icon-wrap { width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: var(--bg-alt); }
-.tool-icon-wrap img { width: 36px; height: 36px; object-fit: contain; display: block; }
+.tool-icon-wrap img { width: 36px; height: 36px; object-fit: contain; display: block; mix-blend-mode: screen; background: transparent; }
+[data-theme="light"] .tool-icon-wrap img { mix-blend-mode: normal; }
 .tool-icon-text { font-family: 'Poppins', sans-serif; font-size: 0.75rem; font-weight: 800; color: var(--primary); letter-spacing: 0.05em; }
 .tool-name { font-size: 0.78rem; font-weight: 600; color: var(--body); line-height: 1.3; }
 @media (max-width: 1024px) { .tools-grid { grid-template-columns: repeat(4,1fr); } }

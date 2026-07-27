@@ -1,11 +1,6 @@
-/* ============================================================
+/* 
    main.js — Portfolio Controller  (Revision 2)
-   • Social links → icon-only compact circles (no text labels)
-   • Info cards   → letter-badge icons (no emoji)
-   • Services     → numbered badges (no emoji)
-   • Skills       → accent bar instead of emoji icon
-   • All emoji removed except Experience section timeline dots
-   ============================================================ */
+   */
 
 (function () {
   'use strict';
@@ -122,34 +117,108 @@
   /* ════════════════════════════════════════════════════════════
      2. NAVBAR
   ═════════════════════════════════════════════════════════════*/
+  /* ════════════════════════════════════════════════════════════
+     2. NAVBAR — URL hash navigation
+     • Clicking a nav link  → history.pushState  (back btn works)
+     • Scrolling between sections → history.replaceState (no spam)
+     • Page load with hash → smooth scroll to that section
+     • Browser back / forward → popstate scrolls to section
+     • Active nav highlight follows both scroll and hash
+  ═════════════════════════════════════════════════════════════*/
   function initNav() {
     const navbar   = $('#navbar');
     const links    = $$('.nav-link');
     const sections = $$('section[id]');
+    let   lastHash = '';          /* tracks last hash to avoid duplicate calls */
 
+    /* ── Navbar background on scroll ────────────────────────── */
     window.addEventListener('scroll', () => {
       navbar?.classList.toggle('scrolled', window.scrollY > 50);
-      updateActive();
+      onScroll();
     }, { passive: true });
 
-    function updateActive() {
-      let current = '';
+    /* ── Determine which section is in view ─────────────────── */
+    function currentSection() {
+      let id = '';
       sections.forEach(sec => {
-        if (window.scrollY >= sec.offsetTop - 130) current = sec.id;
+        if (window.scrollY >= sec.offsetTop - 140) id = sec.id;
       });
-      links.forEach(a => a.classList.toggle('active', a.dataset.section === current));
+      return id;
     }
 
-    /* Smooth scroll for all # anchors */
+    /* ── Update URL hash ─────────────────────────────────────── */
+    /* push = true  → new history entry (back button navigates back)
+       push = false → replace current entry (silent scroll tracking) */
+    function setHash(id, push) {
+      /* home section → remove hash so URL stays clean */
+      const hash = (id && id !== 'home') ? '#' + id : location.pathname;
+      if (hash === lastHash) return;
+      lastHash = hash;
+      const state = { section: id || 'home' };
+      if (push) {
+        history.pushState(state, '', hash);
+      } else {
+        history.replaceState(state, '', hash);
+      }
+    }
+
+    /* ── Highlight active nav link ───────────────────────────── */
+    function highlightLink(id) {
+      links.forEach(a => a.classList.toggle('active', a.dataset.section === id));
+    }
+
+    /* ── Scroll to a section by id ───────────────────────────── */
+    function scrollToSection(id) {
+      const el = id ? document.getElementById(id) : null;
+      const top = el ? el.offsetTop - 78 : 0;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+
+    /* ── On scroll: update hash + active link ────────────────── */
+    function onScroll() {
+      const id = currentSection();
+      highlightLink(id);
+      setHash(id, false);   /* replaceState — no new history entry */
+    }
+
+    /* ── Click on any # anchor ───────────────────────────────── */
     document.addEventListener('click', e => {
       const anchor = e.target.closest('a[href^="#"]');
       if (!anchor) return;
-      const target = document.getElementById(anchor.getAttribute('href').slice(1));
+      const id     = anchor.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
       if (!target) return;
       e.preventDefault();
-      window.scrollTo({ top: target.offsetTop - 78, behavior: 'smooth' });
+
+      setHash(id, true);            /* pushState → back button works */
+      scrollToSection(id);
+      highlightLink(id);
       closeMobileMenu();
     });
+
+    /* ── Browser back / forward button ──────────────────────── */
+    window.addEventListener('popstate', e => {
+      const id = e.state?.section || (location.hash ? location.hash.slice(1) : 'home');
+      scrollToSection(id === 'home' ? '' : id);
+      highlightLink(id);
+    });
+
+    /* ── Page load: scroll to hash if URL already has one ────── */
+    (function handleInitialHash() {
+      const hash = location.hash;
+      if (hash && hash.length > 1) {
+        const id = hash.slice(1);
+        /* Delay to let page fully render before scrolling */
+        setTimeout(() => {
+          scrollToSection(id);
+          highlightLink(id);
+        }, 120);
+      } else {
+        /* No hash on load — set clean initial state so popstate works */
+        history.replaceState({ section: 'home' }, '', location.pathname);
+        highlightLink('home');
+      }
+    })();
   }
 
   /* ════════════════════════════════════════════════════════════
@@ -182,10 +251,16 @@
   function renderHero() {
     const p = D.personal;
 
- 
+    /* Name — last word gets accent colour */
+    const nameEl = $('#hero-name');
+    if (nameEl) {
+      const parts = p.name.trim().split(' ');
+      const last  = parts.pop();
+      nameEl.innerHTML = `${safe(parts.join(' '))} <span class="name-accent">${safe(last)}</span>`;
+    }
 
-    $('#nav-initials')    && ($('#nav-initials').textContent    = p.initials || 'JOA');
-    $('#footer-initials') && ($('#footer-initials').textContent = p.initials || 'JOA');
+    $('#nav-initials')    && ($('#nav-initials').textContent    = p.initials || 'JELILAT');
+    $('#footer-initials') && ($('#footer-initials').textContent = p.initials || 'JELILAT');
     $('#hero-tagline')    && ($('#hero-tagline').textContent    = p.tagline);
 
     /* Profile photo */
@@ -193,16 +268,10 @@
     if (photo) {
       photo.src = p.profilePhoto;
       photo.onerror = () => {
-        photo.src = `https://placehold.co/440x440/6D28D9/FFFFFF?text=${encodeURIComponent(p.initials || 'JOA')}`;
+        photo.src = `https://placehold.co/440x440/6D28D9/FFFFFF?text=${encodeURIComponent(p.initials || 'AJ')}`;
       };
     }
-   /* Name — last word gets accent colour */
-    const nameEl = $('#hero-name');
-    if (nameEl) {
-      const parts = p.name.trim().split(' ');
-      const last  = parts.pop();
-      nameEl.innerHTML = `${safe(parts.join(' '))} <span class="name-accent">${safe(last)}</span>`;
-    }
+
     /* Button hrefs */
     const setHref = (id, href) => { const el = $(id); if (el) el.href = href; };
     setHref('#hero-schedule',     p.scheduleUrl);
@@ -267,7 +336,7 @@
 
     const catLabels = {
       all: 'All Projects', data: 'Data Analytics',
-      Sales: 'Sales', product: 'Product', business: 'Business',
+      python: 'Python', product: 'Product', business: 'Business',
     };
 
     /* Filter tabs */
@@ -645,7 +714,7 @@
   function initScheduleFab() {
     const fab = $('#schedule-fab');
     if (fab) fab.href = D.personal.scheduleUrl;
-  }
+   }
 
   function initContactForm() {
     const form   = $('#contact-form');

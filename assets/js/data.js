@@ -52,61 +52,54 @@ const PORTFOLIO_DATA = {
        showHover → true = subtle lift on hover, false = no hover at all
        visible   → set false to hide an icon without deleting it        */
     socialIcons: [
-      {
+       {
         key:        "linkedin",
         url:        "https://www.linkedin.com/in/jelilat/",
-        imgUrl:     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrF3zyv6McczN653khKPc5QfLUTBPKkVs46Bq8xjwV7OJa4BieTsS38yDs&s=10",
+        imgUrl:     "https://cdn.simpleicons.org/inspire/FFFFFF",
         label:      "LinkedIn",
-        iconColor:  "white",
+        svgPath: "",
         showHover:  false,
         visible:    true
       },
       {
         key:        "github",
         url:        "https://github.com/Jelilat25",
-        imgUrl:     "https://p7.hiclipart.com/preview/31/119/666/github-logo-repository-computer-icons-github.jpg",
+        imgUrl:     "https://cdn.simpleicons.org/github/FFFFFF",
         label:      "GitHub",
-        iconColor:  "white",
         showHover:  false,
         visible:    true
       },
       {
-        key:        "UpWork",
-        url:        "https://www.upwork.com/freelancers/~0150108b364b40a38f",
-        imgUrl:     "https://www.citypng.com/public/uploads/preview/upwork-round-black-logo-icon-735811696609922hnwnyggn9o.png",            /* ← add your own image URL here */
-        label:      "UpWork",
-        customText: "UP",         /* shown when imgUrl is empty */
-        iconColor:  "white",
+        key:        "upwork",
+        url:        "https://www.upwork.com/freelancers/jelilat",
+        imgUrl:     "https://cdn.simpleicons.org/upwork/FFFFFF",
+        label:      "Upwork",
         showHover:  false,
         visible:    true
       },
       {
-        key:        "contra",
-        url:        "https://contra.com/JelilatDataInsights",
-        imgUrl:     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3YlNgnSUF93eigQ9XknDkU0NOPOJAWTTBn29Lm_8sx2PpaiIU-wWnYTc&s=10",
-        label:      "Contra",
-        customText: "CO",
-        iconColor:  "white",
+        key:        "novypro",
+        url:        "https://www.novypro.com/profile_projects/jelilatdatainsights",
+        imgUrl:     "",
+        customText: "NV",
+        label:      "NovyPro",
         showHover:  false,
-        visible:    true
+        visible:    false
       },
       {
         key:        "email",
         url:        "mailto:jelilatoluwatosinabdullateef@gmail.com",
-        imgUrl:     "https://png.pngtree.com/element_our/png/20181213/inbox-vector-icon-png_267453.jpg",
+        imgUrl:     "https://cdn.simpleicons.org/gmail/FFFFFF",
         label:      "Email",
-        /* inline SVG envelope — change to imgUrl if you prefer */
         svgPath:    "M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z",
-        iconColor:  "white",
         showHover:  false,
         visible:    true
       },
       {
         key:        "whatsapp",
         url:        "https://wa.me/2349075860492",
-        imgUrl:     "https://img.icons8.com/p1em/1200/whatsapp.jpg",
+        imgUrl:     "https://cdn.simpleicons.org/whatsapp/FFFFFF",
         label:      "WhatsApp",
-        iconColor:  "white",
         showHover:  false,
         visible:    true
       }
@@ -115,13 +108,13 @@ const PORTFOLIO_DATA = {
 
   /* ─── ABOUT ─────────────────────────────────────────────── */
   about: {
-    bio:  ` I'm a business and technology generalist who bridges the gap between data, products, and people. With over five years of experience across data analytics, product management, QA, sales, and lead generation, I don't just identify problems, I help solve them from start to finish.`,
+    bio:  ` I'm a business and technology generalist who bridges the gap between data, products, and people. With over four years of experience across data analytics, product management, QA, sales, and lead generation, I don't just identify problems, I help solve them from start to finish.`,
     bio2: `I enjoy working across different areas of a business, from data and products to sales and client management. My goal is simple: help teams work more efficiently, make better decisions, and create meaningful results. I've worked with organizations across retail, real estate, architecture, technology, and talent markets`,
 
     stats: [
-      { value: 5,  suffix: "+", label: "Years Experience"   },
+      { value: 4,  suffix: "+", label: "Years Experience"   },
       { value: 14, suffix: "+", label: "Projects Delivered" },
-      { value: 9,  suffix: "+", label: "Roles Mastered"     },
+      { value: 8,  suffix: "+", label: "Roles Mastered"     },
       { value: 6,  suffix: "+", label: "Industries Served"  }
     ]
   },
@@ -387,7 +380,7 @@ const PORTFOLIO_DATA = {
       id:        5,
       company:   "Excelerate",
       role:      "Data Visualization Analyst",
-      duration:  "Dec 2025 - Apr 2025",
+      duration:  "Dec 2024 - Apr 2025",
       type:      "Internship",
       icon:      "📈",
       highlights: [
@@ -396,22 +389,8 @@ const PORTFOLIO_DATA = {
         "Translated complex datasets into clear, compelling visual narratives for business audiences."
       ]
     },
-    {
-      id:        6,
-      company:   "Kugler Services LLC",
-      role:      "Freelance Data Analyst",
-      duration:  "Feb 2024 - Sep 2024",
-      type:      "Freelance",
-      icon:      "📈",
-      highlights: [
-        "Engineered a dynamic Power BI cash management dashboard, achieving 30% time savings in financial tracking.",
-        "Automated cash forecasting processes, uncovering expenditure trends that enhanced budget allocation accuracy.",
-        "Reduced financial tracking errors by 15% through automated dashboard refresh and rigorous data validation.",
-        "Delivered actionable insights through deep analysis of expenditure trends and transaction data patterns."
-      ]
-    },
  {
-      id:        7,
+      id:        6,
       company:   "MeriSKILL",
       role:      "Data Analyst Intern",
       duration:  "Jan 2024 – Aug 2024",
@@ -424,7 +403,7 @@ const PORTFOLIO_DATA = {
       ]
     },
     {
-      id:        8,
+      id:        7,
       company:   "Intern Career",
       role:      "Data Analyst Intern",
       duration:  "Dec 2023 - Apr 2024",
@@ -437,7 +416,7 @@ const PORTFOLIO_DATA = {
       ]
     },
     {
-      id:        9,
+      id:        8,
       company:   "Crownford Model School",
       role:      "Mathematics Teacher",
       duration:  "Feb 2020 – Nov 2022",
@@ -463,7 +442,7 @@ const PORTFOLIO_DATA = {
         { name: "SQL",           level: 88 },
         { name: "Excel",         level: 92 },
         { name: "Tableau",       level: 80 },
-        { name: "Google Sheets", level: 88 }
+        { name: "Google Sheets", level: 90 }
       ]
     },
     {
@@ -471,8 +450,8 @@ const PORTFOLIO_DATA = {
       icon:  "🎯",
       color: "#A78BFA",
       items: [
-        { name: "Apollo.io",          level: 85 },
-        { name: "HubSpot",            level: 80 },
+        { name: "Apollo.io",          level: 93 },
+        { name: "HubSpot",            level: 88 },
         { name: "Lead Generation",    level: 88 },
         { name: "Cold Calling",       level: 85 },
         { name: "Account Management", level: 90 },
@@ -484,10 +463,10 @@ const PORTFOLIO_DATA = {
       icon:  "🔬",
       color: "#7C3AED",
       items: [
-        { name: "Product Management",   level: 78 },
+        { name: "Product Management",   level: 80 },
         { name: "Product Analytics",    level: 82 },
         { name: "QA Testing",           level: 80 },
-        { name: "User Research",         level: 75 },
+        { name: "User Research",         level: 80 },
         { name: "Requirements Analysis", level: 82 },
         { name: "Roadmap Planning",     level: 75 }
       ]
@@ -502,7 +481,7 @@ const PORTFOLIO_DATA = {
         { name: "Stakeholder Mgmt",     level: 85 },
         { name: "Report Writing",       level: 88 },
         { name: "Project Coordination", level: 82 },
-        { name: "Strategic Planning",   level: 78 }
+        { name: "Strategic Planning",   level: 90 }
       ]
     }
   ],
@@ -669,8 +648,8 @@ const PORTFOLIO_DATA = {
       skills:     "Jelilat is skilled in Power BI, Python, SQL, Excel, and Tableau for data — plus Apollo, HubSpot, and cold calling on the sales side. She also does QA testing and product analytics.",
       python:     "Yes! Jelilat uses Python for data analysis and machine learning. She's worked with Pandas, Seaborn, Matplotlib, SciPy, and statsmodels on real client projects.",
       powerbi:    "Power BI is one of Jelilat's strongest tools. She's built dashboards for financial tracking, HR analytics, sales reporting, and more — all interactive and auto-refreshing.",
-      projects:   "Jelilat has delivered 14+ projects including cash management dashboards, HR analytics, road accident analysis, diabetes prediction, and YouTube streamers analysis.",
-      experience: "Jelilat has five years of experience across data analytics, product management, QA testing, sales, and lead generation — spanning 9 roles across 5+ industries.",
+      projects:   "Jelilat has delivered 14+ projects including cash management dashboards, HR analytics, SalesIQ Chat bot, diabetes prediction, and YouTube streamers analysis.",
+      experience: "Jelilat has four years of experience across data analytics, product management, QA testing, sales, and lead generation — spanning 8 roles across 5+ industries.",
       hire:       "You can hire Jelilat via the Contact form on this page, send an email to jelilatoluwatosinabdullateef@gmail.com, or schedule a 1-on-1 call at cal.com/en/jelilatdatainsights",
       contact:    "You can reach Jelilat by email at jelilatoluwatosinabdullateef@gmail.com, WhatsApp at +2349075860492, or LinkedIn at linkedin.com/in/jelilat/",
       services:   "Jelilat offers: Data Analytics & Dashboards, Product Analytics, Lead Generation, Sales & Account Management, QA Testing, and Business Analysis & Reporting.",
