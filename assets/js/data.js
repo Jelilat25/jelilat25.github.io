@@ -95,6 +95,14 @@ const PORTFOLIO_DATA = {
         showHover:  false,
         visible:    true
       },
+       {
+        key:        "WIX",
+        url:        "https://abdullateefjelilat.wixsite.com/jelilatdatainsights",
+        imgUrl:     "https://cdn.simpleicons.org/wix/FFFFFF",
+        label:      "WIX",
+        showHover:  false,
+        visible:    true
+      },
       {
         key:        "whatsapp",
         url:        "https://wa.me/2349075860492",
