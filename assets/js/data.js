@@ -23,13 +23,11 @@ const PORTFOLIO_DATA = {
 
     roles: [
       "Data Analyst",
+      "Customer Success Specialist",
       "Product Analyst",
-      "Product Manager",
-      "QA Tester",
-      "Lead Generation Specialist",
-      "Sales Professional",
+      "Business Operations Specialist",
       "Account Manager",
-      "Business Problem Solver"
+      "Product Manager"
     ],
 
     social: {
@@ -653,14 +651,14 @@ const PORTFOLIO_DATA = {
     name:     "Tosin",
     greeting: "Hi there! I'm Tosin, Jelilat's AI assistant. Ask me about her skills, projects, or how to hire her!",
     responses: {
-      skills:     "Jelilat is skilled in Power BI, Python, SQL, Excel, and Tableau for data — plus Apollo, HubSpot, and cold calling on the sales side. She also does QA testing and product analytics.",
-      python:     "Yes! Jelilat uses Python for data analysis and machine learning. She's worked with Pandas, Seaborn, Matplotlib, SciPy, and statsmodels on real client projects.",
+      skills:     "Jelilat is skilled in Power BI, Python, SQL, Excel, and Tableau for data — plus Apollo, HubSpot, and cold calling on the sales side. She also does customer success and product analytics.",
+      python:     "Yes! Jelilat uses Python for data analysis and machine learning. She's worked with Pandas, Seaborn, SciPy, and statsmodels on real client projects.",
       powerbi:    "Power BI is one of Jelilat's strongest tools. She's built dashboards for financial tracking, HR analytics, sales reporting, and more — all interactive and auto-refreshing.",
       projects:   "Jelilat has delivered 14+ projects including cash management dashboards, HR analytics, SalesIQ Chat bot, diabetes prediction, and YouTube streamers analysis.",
-      experience: "Jelilat has four years of experience across data analytics, product management, QA testing, sales, and lead generation — spanning 8 roles across 5+ industries.",
+      experience: "Jelilat has years of experience across data analytics, product management, customer success, sales, and business operations — spanning 8 roles across 5+ industries.",
       hire:       "You can hire Jelilat via the Contact form on this page, send an email to jelilatoluwatosinabdullateef@gmail.com, or schedule a 1-on-1 call at cal.com/en/jelilatdatainsights",
       contact:    "You can reach Jelilat by email at jelilatoluwatosinabdullateef@gmail.com, WhatsApp at +2349075860492, or LinkedIn at linkedin.com/in/jelilat/",
-      services:   "Jelilat offers: Data Analytics & Dashboards, Product Analytics, Lead Generation, Sales & Account Management, QA Testing, and Business Analysis & Reporting.",
+      services:   "Jelilat offers: Data Analytics & Dashboards, Product Analytics, Customer Success, Sales & Account Management, Business Operations, and Business Analysis & Reporting.",
       location:   "Jelilat is based in Nigeria, and works with clients remotely from anywhere in the world.",
       resume:     "You can download Jelilat's resume using the Resume button in the navigation bar or the footer of this page.",
       default:    "I can answer questions about Jelilat's skills, projects, experience, services, or how to hire her. What would you like to know?"
